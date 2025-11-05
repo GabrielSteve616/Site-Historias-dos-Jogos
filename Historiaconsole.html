@@ -17,6 +17,10 @@
       --sombra: rgba(0, 0, 0, 0.15);
     }
 
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       font-family: "Poppins", Arial, sans-serif;
       background-color: var(--cinza);
@@ -50,14 +54,17 @@
     .navigation {
       text-align: center;
       margin: 25px 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
     }
 
     button {
       background-color: var(--azul-detalhe);
       color: var(--branco);
       border: none;
-      padding: 12px 26px;
-      margin: 8px;
+      padding: 12px 22px;
       border-radius: 10px;
       cursor: pointer;
       font-weight: 600;
@@ -78,8 +85,8 @@
       margin: auto;
     }
 
-    /* Seções dos controles */
-    .control-section {
+    /* Seções dos consoles */
+    .console-section {
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -93,40 +100,42 @@
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
-    .control-section:hover {
+    .console-section:hover {
       transform: translateY(-4px);
       box-shadow: 0 6px 15px var(--sombra);
     }
 
-    .control-section:nth-child(even) {
+    .console-section:nth-child(even) {
       flex-direction: row-reverse;
       border-left: none;
       border-right: 6px solid var(--azul-detalhe);
     }
 
-    .control-section img {
+    .console-section img {
       width: 40%;
+      max-width: 100%;
+      height: auto;
       border-radius: 12px;
       object-fit: cover;
       border: 3px solid #ddd;
       transition: transform 0.3s ease;
     }
 
-    .control-section img:hover {
+    .console-section img:hover {
       transform: scale(1.03);
     }
 
-    .control-text {
+    .console-text {
       width: 55%;
     }
 
-    .control-text h2 {
+    .console-text h2 {
       margin: 0 0 10px;
       color: var(--azul-detalhe);
       font-size: 1.5em;
     }
 
-    .control-text p {
+    .console-text p {
       margin: 6px 0;
       color: var(--cinza-escuro);
       line-height: 1.6;
@@ -159,109 +168,116 @@
 
     /* Responsivo */
     @media (max-width: 768px) {
-      .control-section {
-        flex-direction: column;
-        text-align: center;
+      header h1 {
+        font-size: 1.8em;
       }
 
-      .control-section img,
-      .control-text {
+      .console-section {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px;
+      }
+
+      .console-section img,
+      .console-text {
         width: 100%;
       }
 
-      header h1 {
-        font-size: 2em;
+      .console-text h2 {
+        font-size: 1.2em;
       }
 
-      .control-text h2 {
-        font-size: 1.3em;
+      .navigation button {
+        width: 90%;
+        max-width: 300px;
       }
     }
   </style>
 </head>
 
 <body>
-    <header>
-        <h1>História dos Consoles Sony - PlayStation</h1>
-        <h4>Da estreia em 1994 até a potência do PS5</h4>
-    </header>
+  <header>
+    <h1>História dos Consoles Sony - PlayStation</h1>
+    <h4>Da estreia em 1994 até a potência do PS5</h4>
+  </header>
 
-    <div class="navigation">
-        <a href="index.html"><button>Tela Inicial</button></a>
-        <a href="Historiajogos.html"><button>História dos Jogos</button></a>
-        <a href="Evoluçãocontroles.html"><button>Evolução dos Controles</button></a>
-    </div>
+  <div class="navigation">
+    <a href="index.html"><button>Tela Inicial</button></a>
+    <a href="Historiajogos.html"><button>História dos Jogos</button></a>
+    <a href="Evoluçãocontroles.html"><button>Evolução dos Controles</button></a>
+  </div>
 
-    <main>
-        <section class="intro">
-            <h2>A jornada da Sony no mundo dos games</h2>
-            <p>
-                Desde o primeiro PlayStation em 1994, a Sony moldou a história dos videogames com inovação, tecnologia e experiências inesquecíveis.  
-                Cada console trouxe uma revolução — desde os CDs e DVDs até o SSD ultrarrápido e o DualSense — marcando gerações de jogadores.
-            </p>
-        </section>
+  <main>
+    <section class="intro">
+      <h2>A jornada da Sony no mundo dos games</h2>
+      <p>
+        Desde o primeiro PlayStation em 1994, a Sony moldou a história dos videogames com inovação, tecnologia e experiências inesquecíveis.  
+        Cada console trouxe uma revolução — desde os CDs e DVDs até o SSD ultrarrápido e o DualSense — marcando gerações de jogadores.
+      </p>
+    </section>
 
-        <!-- PS1 -->
-        <section class="console-section">
-            <img src="imagens/ps1.jpg" alt="PlayStation 1">
-            <div class="console-text">
-                <h2>PlayStation (PS1)</h2>
-                <p><strong>Lançamento:</strong> 3 de dezembro de 1994 (Japão)</p>
-                <p>O PS1 foi o início de uma era. Com jogos em CD e gráficos 3D, apresentou títulos lendários como Final Fantasy VII, Crash Bandicoot e Metal Gear Solid.</p>
-            </div>
-        </section>
+    <!-- PS1 -->
+    <section class="console-section">
+      <img src="imagens/ps1.jpg" alt="PlayStation 1">
+      <div class="console-text">
+        <h2>PlayStation (PS1)</h2>
+        <p><strong>Lançamento:</strong> 3 de dezembro de 1994 (Japão)</p>
+        <p>O PS1 foi o início de uma era. Com jogos em CD e gráficos 3D, apresentou títulos lendários como Final Fantasy VII, Crash Bandicoot e Metal Gear Solid.</p>
+      </div>
+    </section>
 
-        <!-- PS2 -->
-        <section class="console-section">
-            <img src="imagens/ps2.jpg" alt="PlayStation 2">
-            <div class="console-text">
-                <h2>PlayStation 2 (PS2)</h2>
-                <p><strong>Lançamento:</strong> 4 de março de 2000 (Japão)</p>
-                <p>O console mais vendido de todos os tempos. Com suporte a DVD e uma biblioteca imensa, trouxe clássicos como GTA: San Andreas e God of War.</p>
-            </div>
-        </section>
+    <!-- PS2 -->
+    <section class="console-section">
+      <img src="imagens/ps2.jpg" alt="PlayStation 2">
+      <div class="console-text">
+        <h2>PlayStation 2 (PS2)</h2>
+        <p><strong>Lançamento:</strong> 4 de março de 2000 (Japão)</p>
+        <p>O console mais vendido de todos os tempos. Com suporte a DVD e uma biblioteca imensa, trouxe clássicos como GTA: San Andreas e God of War.</p>
+      </div>
+    </section>
 
-        <!-- PS3 -->
-        <section class="console-section">
-            <img src="imagens/ps3.jpg" alt="PlayStation 3">
-            <div class="console-text">
-                <h2>PlayStation 3 (PS3)</h2>
-                <p><strong>Lançamento:</strong> 11 de novembro de 2006 (Japão)</p>
-                <p>Introduziu o Blu-ray e gráficos em alta definição. Consoles como Uncharted e The Last of Us mostraram o poder cinematográfico dos games.</p>
-            </div>
-        </section>
+    <!-- PS3 -->
+    <section class="console-section">
+      <img src="imagens/ps3.jpg" alt="PlayStation 3">
+      <div class="console-text">
+        <h2>PlayStation 3 (PS3)</h2>
+        <p><strong>Lançamento:</strong> 11 de novembro de 2006 (Japão)</p>
+        <p>Introduziu o Blu-ray e gráficos em alta definição. Consoles como Uncharted e The Last of Us mostraram o poder cinematográfico dos games.</p>
+      </div>
+    </section>
 
-        <!-- PS4 -->
-        <section class="console-section">
-            <img src="imagens/ps4.jpg" alt="PlayStation 4">
-            <div class="console-text">
-                <h2>PlayStation 4 (PS4)</h2>
-                <p><strong>Lançamento:</strong> 15 de novembro de 2013 (EUA)</p>
-                <p>Com foco em desempenho e jogos imersivos, o PS4 consolidou franquias como Horizon Zero Dawn e God of War (2018).</p>
-            </div>
-        </section>
+    <!-- PS4 -->
+    <section class="console-section">
+      <img src="imagens/ps4.jpg" alt="PlayStation 4">
+      <div class="console-text">
+        <h2>PlayStation 4 (PS4)</h2>
+        <p><strong>Lançamento:</strong> 15 de novembro de 2013 (EUA)</p>
+        <p>Com foco em desempenho e jogos imersivos, o PS4 consolidou franquias como Horizon Zero Dawn e God of War (2018).</p>
+      </div>
+    </section>
 
-        <!-- PS5 -->
-        <section class="console-section">
-            <img src="imagens/ps5.jpg" alt="PlayStation 5">
-            <div class="console-text">
-                <h2>PlayStation 5 (PS5)</h2>
-                <p><strong>Lançamento:</strong> 12 de novembro de 2020 (EUA)</p>
-                <p>Com SSD ultrarrápido e o controle DualSense, o PS5 levou a imersão a um novo patamar, unindo desempenho e realismo como nunca antes.</p>
-            </div>
-        </section>
-    </main>
+    <!-- PS5 -->
+    <section class="console-section">
+      <img src="imagens/ps5.jpg" alt="PlayStation 5">
+      <div class="console-text">
+        <h2>PlayStation 5 (PS5)</h2>
+        <p><strong>Lançamento:</strong> 12 de novembro de 2020 (EUA)</p>
+        <p>Com SSD ultrarrápido e o controle DualSense, o PS5 levou a imersão a um novo patamar, unindo desempenho e realismo como nunca antes.</p>
+      </div>
+    </section>
+  </main>
 
-    <footer>
-        <h2>Descrições Finais</h2>
-        <p>Desenvolvido por <strong>Gabriel Steve de Olveira</strong></p>
-        <p>
-            <a href="https://www.instagram.com/gabriel_steve616" target="_blank">Instagram</a> |
-            <a href="https://www.facebook.com/share/1BXgoaGVBG/" target="_blank">Facebook</a> |
-            <a href="https://www.linkedin.com/in/gabriel-steve-de-oliveira-2a47331ba" target="_blank">LinkedIn</a> |
-            <a href="https://github.com/GabrielSteve616" target="_blank">GitHub</a>
-        </p>
-        <p>&copy; 2025 - Projeto História dos Games</p>
-    </footer>
+  <footer>
+    <h2>Descrições Finais</h2>
+    <p>Desenvolvido por <strong>Gabriel Steve de Oliveira</strong></p>
+    <p>
+      <a href="https://www.instagram.com/gabriel_steve616" target="_blank">Instagram</a> |
+      <a href="https://www.facebook.com/share/1BXgoaGVBG/" target="_blank">Facebook</a> |
+      <a href="https://www.linkedin.com/in/gabriel-steve-de-oliveira-2a47331ba" target="_blank">LinkedIn</a> |
+      <a href="https://github.com/GabrielSteve616" target="_blank">GitHub</a>
+    </p>
+    <p>&copy; 2025 - Projeto História dos Games</p>
+  </footer>
 </body>
+
 </html>
