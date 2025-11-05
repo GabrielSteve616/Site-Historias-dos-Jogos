@@ -7,208 +7,217 @@
   <title>História dos Consoles PlayStation</title>
 
   <style>
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
-:root {
-  --preto: #0f0f0f;
-  --cinza: #f4f4f4;
-  --branco: #ffffff;
-  --azul-detalhe: #333;
-  --cinza-escuro: #222;
-  --sombra: rgba(0, 0, 0, 0.15);
+    :root {
+      --preto: #0f0f0f;
+      --cinza: #f4f4f4;
+      --branco: #ffffff;
+      --azul-detalhe: #333;
+      --cinza-escuro: #222;
+      --sombra: rgba(0, 0, 0, 0.15);
 
-  /* 🎯 VARIÁVEIS DE TAMANHO DAS IMAGENS */
-  --img-width-desktop: 40%;   /* largura relativa no desktop */
-  --img-max-desktop: 300px;   /* largura máxima no desktop */
-  --img-width-mobile: 60%;    /* largura relativa no celular */
-  --img-max-mobile: 220px;    /* largura máxima no celular */
-  --img-radius: 12px;         /* borda arredondada */
-  --img-border: 3px solid #ddd; /* borda da imagem */
-}
+      /* Tamanhos das imagens */
+      --img-width-desktop: 40%;
+      --img-max-desktop: 320px;
+      --img-width-mobile: 85%;
+      --img-max-mobile: 250px;
+    }
 
-* {
-  box-sizing: border-box;
-}
+    * {
+      box-sizing: border-box;
+    }
 
-body {
-  font-family: "Poppins", Arial, sans-serif;
-  background-color: var(--cinza);
-  color: var(--preto);
-  margin: 0;
-  padding: 0;
-}
+    body {
+      font-family: "Poppins", Arial, sans-serif;
+      background-color: var(--cinza);
+      color: var(--preto);
+      margin: 0;
+      padding: 0;
+    }
 
-/* Cabeçalho */
-header {
-  background: linear-gradient(135deg, var(--azul-detalhe), #0056b3);
-  color: var(--branco);
-  text-align: center;
-  padding: 2.5em 1em;
-  box-shadow: 0 3px 8px var(--sombra);
-}
+    /* Cabeçalho */
+    header {
+      background: linear-gradient(135deg, var(--azul-detalhe), #0056b3);
+      color: var(--branco);
+      text-align: center;
+      padding: 2.5em 1em;
+      box-shadow: 0 3px 8px var(--sombra);
+    }
 
-header h1 {
-  margin: 0;
-  font-size: 2.4em;
-  letter-spacing: 1px;
-}
+    header h1 {
+      margin: 0;
+      font-size: 2.4em;
+      letter-spacing: 1px;
+    }
 
-header h4 {
-  font-weight: 400;
-  color: #dcdcdc;
-  margin-top: 10px;
-}
+    header h4 {
+      font-weight: 400;
+      color: #dcdcdc;
+      margin-top: 10px;
+    }
 
-/* Navegação */
-.navigation {
-  text-align: center;
-  margin: 25px 0;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 10px;
-}
+    /* Navegação */
+    .navigation {
+      text-align: center;
+      margin: 25px 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+    }
 
-button {
-  background-color: var(--azul-detalhe);
-  color: var(--branco);
-  border: none;
-  padding: 12px 22px;
-  border-radius: 10px;
-  cursor: pointer;
-  font-weight: 600;
-  letter-spacing: 0.5px;
-  transition: all 0.3s ease;
-  box-shadow: 0 2px 6px var(--sombra);
-}
+    button {
+      background-color: var(--azul-detalhe);
+      color: var(--branco);
+      border: none;
+      padding: 12px 22px;
+      border-radius: 10px;
+      cursor: pointer;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      transition: all 0.3s ease;
+      box-shadow: 0 2px 6px var(--sombra);
+    }
 
-button:hover {
-  background-color: var(--cinza-escuro);
-  transform: scale(1.05);
-}
+    button:hover {
+      background-color: var(--cinza-escuro);
+      transform: scale(1.05);
+    }
 
-/* Estrutura principal */
-main {
-  padding: 20px;
-  max-width: 1100px;
-  margin: auto;
-}
+    /* Estrutura principal */
+    main {
+      padding: 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
 
-/* Seções dos consoles */
-.console-section {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background-color: var(--branco);
-  border-radius: 16px;
-  box-shadow: 0 3px 10px var(--sombra);
-  margin-bottom: 30px;
-  padding: 25px;
-  gap: 25px;
-  border-left: 6px solid var(--azul-detalhe);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
+    /* Seções dos consoles */
+    .console-section {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: var(--branco);
+      border-radius: 16px;
+      box-shadow: 0 3px 10px var(--sombra);
+      margin-bottom: 30px;
+      padding: 25px;
+      gap: 25px;
+      border-left: 6px solid var(--azul-detalhe);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
 
-.console-section:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 6px 15px var(--sombra);
-}
+    .console-section:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 6px 15px var(--sombra);
+    }
 
-.console-section:nth-child(even) {
-  flex-direction: row-reverse;
-  border-left: none;
-  border-right: 6px solid var(--azul-detalhe);
-}
+    .console-section:nth-child(even) {
+      flex-direction: row-reverse;
+      border-left: none;
+      border-right: 6px solid var(--azul-detalhe);
+    }
 
-/* 🎮 Imagens dos consoles — controladas pelas variáveis globais */
-.console-section img {
-  width: var(--img-width-desktop);
-  max-width: var(--img-max-desktop);
-  height: auto;
-  border-radius: var(--img-radius);
-  object-fit: cover;
-  border: var(--img-border);
-  transition: transform 0.3s ease;
-}
+    .console-section img {
+      width: var(--img-width-desktop);
+      max-width: var(--img-max-desktop);
+      height: auto;
+      border-radius: 12px;
+      object-fit: cover;
+      border: 3px solid #ddd;
+      transition: transform 0.3s ease;
+    }
 
-.console-section img:hover {
-  transform: scale(1.03);
-}
+    .console-section img:hover {
+      transform: scale(1.03);
+    }
 
-/* Texto */
-.console-text {
-  width: 55%;
-}
+    .console-text {
+      width: 55%;
+    }
 
-.console-text h2 {
-  margin: 0 0 10px;
-  color: var(--azul-detalhe);
-  font-size: 1.5em;
-}
+    .console-text h2 {
+      margin: 0 0 10px;
+      color: var(--azul-detalhe);
+      font-size: 1.5em;
+    }
 
-.console-text p {
-  margin: 6px 0;
-  color: var(--cinza-escuro);
-  line-height: 1.6;
-}
+    .console-text p {
+      margin: 6px 0;
+      color: var(--cinza-escuro);
+      line-height: 1.6;
+    }
 
-/* Rodapé */
-footer {
-  background-color: var(--preto);
-  color: var(--branco);
-  text-align: center;
-  padding: 2em 1em;
-  margin-top: 40px;
-  border-top: 4px solid var(--azul-detalhe);
-}
+    /* Rodapé */
+    footer {
+      background-color: var(--preto);
+      color: var(--branco);
+      text-align: center;
+      padding: 2em 1em;
+      margin-top: 40px;
+      border-top: 4px solid var(--azul-detalhe);
+    }
 
-footer h2 {
-  margin-bottom: 10px;
-  color: var(--azul-detalhe);
-}
+    footer h2 {
+      margin-bottom: 10px;
+      color: var(--azul-detalhe);
+    }
 
-footer a {
-  color: var(--azul-detalhe);
-  text-decoration: none;
-  font-weight: 500;
-}
+    footer a {
+      color: var(--azul-detalhe);
+      text-decoration: none;
+      font-weight: 500;
+    }
 
-footer a:hover {
-  text-decoration: underline;
-}
+    footer a:hover {
+      text-decoration: underline;
+    }
 
-/* Responsivo */
-@media (max-width: 768px) {
-  header h1 {
-    font-size: 1.8em;
-  }
+    /* Responsivo */
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 1.8em;
+      }
 
-  .console-section {
-    flex-direction: column;
-    text-align: center;
-    padding: 15px;
-  }
+      .console-section {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+        gap: 15px;
+      }
 
-  .console-section img {
-    width: var(--img-width-mobile);
-    max-width: var(--img-max-mobile);
-    margin: 0 auto 15px;
-    display: block;
-  }
+      .console-section img {
+        width: var(--img-width-mobile);
+        max-width: var(--img-max-mobile);
+        margin: 0 auto;
+        display: block;
+      }
 
-  .console-text {
-    width: 100%;
-  }
+      .console-text {
+        width: 100%;
+        text-align: center;
+        padding: 0 10px;
+      }
 
-  .console-text h2 {
-    font-size: 1.2em;
-  }
+      .console-text h2 {
+        font-size: 1.3em;
+        margin-bottom: 8px;
+      }
 
-  .navigation button {
-    width: 90%;
-    max-width: 300px;
-  }
-}
+      .console-text p {
+        font-size: 1em;
+        line-height: 1.6;
+      }
+
+      .navigation {
+        flex-direction: column;
+      }
+
+      .navigation button {
+        width: 90%;
+        max-width: 300px;
+      }
+    }
   </style>
 </head>
 
@@ -298,4 +307,3 @@ footer a:hover {
 </body>
 
 </html>
-
