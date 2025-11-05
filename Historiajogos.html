@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>História dos Jogos</title>
+    <style>
+        :root {
+            --preto: #111;
+            --cinza: #f4f4f4;
+            --branco: #ffffff;
+            --azul-detalhe: #007bff;
+            --cinza-escuro: #333;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: var(--cinza);
+            color: var(--preto);
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Cabeçalho */
+        header {
+            background-color: var(--branco);
+            color: var(--preto);
+            text-align: center;
+            padding: 2em 1em;
+            border-bottom: 4px solid var(--azul-detalhe);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.4em;
+        }
+
+        header h4 {
+            font-weight: normal;
+            margin-top: 10px;
+            color: #555;
+        }
+
+        /* Botões de navegação */
+        .navigation {
+            text-align: center;
+            margin: 25px 0;
+        }
+
+        button {
+            background-color: var(--azul-detalhe);
+            color: var(--branco);
+            border: none;
+            padding: 12px 24px;
+            margin: 8px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+        }
+
+        button:hover {
+            background-color: var(--cinza-escuro);
+            color: var(--branco);
+        }
+
+        /* Estrutura principal */
+        main {
+            padding: 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        /* Seções dos jogos */
+        .game-section {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: var(--branco);
+            border-radius: 12px;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 25px;
+            padding: 20px;
+            gap: 20px;
+            border-left: 6px solid var(--azul-detalhe);
+        }
+
+        .game-section:nth-child(even) {
+            flex-direction: row-reverse;
+            border-left: none;
+            border-right: 6px solid var(--azul-detalhe);
+        }
+
+        .game-section img {
+            width: 40%;
+            border-radius: 10px;
+            object-fit: cover;
+            border: 3px solid #ddd;
+        }
+
+        .game-text {
+            width: 55%;
+        }
+
+        .game-text h2 {
+            margin: 0 0 10px;
+            color: var(--azul-detalhe);
+        }
+
+        .game-text p {
+            margin: 6px 0;
+            color: #222;
+        }
+
+        /* Rodapé */
+        footer {
+            background-color: var(--preto);
+            color: var(--branco);
+            text-align: center;
+            padding: 2em 1em;
+            margin-top: 30px;
+        }
+
+        footer a {
+            color: var(--azul-detalhe);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsivo */
+        @media (max-width: 768px) {
+            .game-section {
+                flex-direction: column;
+            }
+
+            .game-section img,
+            .game-text {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>História dos Jogos</h1>
+        <h3>Uma linha do tempo da evolução dos videogames, de 1958 até os dias atuais</h3>
+    </header>
+
+    <main>
+                <!-- Navegação -->
+        <div class="navigation">
+            <a href="Historiaconsole.html"><button>História dos Consoles</button></a>
+            <a href="index.html"><button>Telai-Inicia</button></a>
+            <a href="Evoluçãocontroles.html"><button>Evolução dos Controles</button></a>
+        </div>
+        <!-- 1958 -->
+        <section class="game-section">
+            <img src="imagens/tennis-for-two.jpg" alt="Tennis for Two">
+            <div class="game-text">
+                <h2>1958 - Tennis for Two</h2>
+                <p><strong>Criador:</strong> William Higinbotham</p>
+                <p>Considerado o primeiro jogo eletrônico da história, “Tennis for Two” simulava uma partida de tênis em um osciloscópio. Foi o início de uma nova forma de entretenimento interativo.</p>
+            </div>
+        </section>
+
+        <!-- 1963 -->
+        <section class="game-section">
+            <img src="imagens/spacewar.jpg" alt="Spacewar!">
+            <div class="game-text">
+                <h2>1963 - Spacewar!</h2>
+                <p><strong>Criador:</strong> Steve Russell e equipe do MIT</p>
+                <p>“Spacewar!” foi um dos primeiros jogos de computador da história, com naves espaciais duelando no espaço. Serviu de inspiração direta para os primeiros arcades da década de 70.</p>
+            </div>
+        </section>
+
+        <!-- 1968 -->
+        <section class="game-section">
+            <img src="imagens/magnavox-odyssey.jpg" alt="Magnavox Odyssey">
+            <div class="game-text">
+                <h2>1968 - Protótipo do Magnavox Odyssey</h2>
+                <p><strong>Criador:</strong> Ralph Baer</p>
+                <p>Ralph Baer desenvolveu o primeiro console de videogame doméstico. Anos depois, o projeto se tornaria o Magnavox Odyssey, lançado oficialmente em 1972.</p>
+            </div>
+        </section>
+
+        <!-- 1973 -->
+        <section class="game-section">
+            <img src="imagens/pong.jpg" alt="Pong">
+            <div class="game-text">
+                <h2>1973 - Pong</h2>
+                <p><strong>Empresa:</strong> Atari</p>
+                <p>“Pong” popularizou os videogames. Simples e viciante, o jogo de tênis virtual foi o primeiro sucesso comercial da história e estabeleceu a Atari como pioneira no mercado.</p>
+            </div>
+        </section>
+
+        <!-- 1978 -->
+        <section class="game-section">
+            <img src="imagens/space-invaders.jpg" alt="Space Invaders">
+            <div class="game-text">
+                <h2>1978 - Space Invaders</h2>
+                <p><strong>Empresa:</strong> Taito</p>
+                <p>O sucesso de “Space Invaders” levou os arcades a um novo patamar, popularizando os fliperamas em todo o mundo e dando origem à chamada “Era de Ouro dos Videogames”.</p>
+            </div>
+        </section>
+
+        <!-- 1983 -->
+        <section class="game-section">
+            <img src="imagens/mario-bros.jpg" alt="Mario Bros">
+            <div class="game-text">
+                <h2>1983 - Mario Bros</h2>
+                <p><strong>Empresa:</strong> Nintendo</p>
+                <p>Em meio à crise dos videogames, a Nintendo lançou “Mario Bros”, que apresentou ao mundo o icônico encanador e marcou o início de uma das maiores franquias da história.</p>
+            </div>
+        </section>
+
+        <!-- 1988 -->
+        <section class="game-section">
+            <img src="imagens/sonic.jpg" alt="Sonic the Hedgehog">
+            <div class="game-text">
+                <h2>1988 - Sonic the Hedgehog</h2>
+                <p><strong>Empresa:</strong> Sega</p>
+                <p>Com a chegada do Mega Drive, “Sonic” se tornou o mascote da Sega e um dos maiores ícones da cultura dos videogames, rivalizando com o Mario da Nintendo.</p>
+            </div>
+        </section>
+
+        <!-- 1993 -->
+        <section class="game-section">
+            <img src="imagens/doom.jpg" alt="Doom">
+            <div class="game-text">
+                <h2>1993 - Doom</h2>
+                <p><strong>Empresa:</strong> id Software</p>
+                <p>“Doom” revolucionou os jogos de tiro em primeira pessoa (FPS) com seus gráficos 3D e jogabilidade intensa. Foi um marco para o futuro dos jogos de ação.</p>
+            </div>
+        </section>
+
+        <!-- 1998 -->
+        <section class="game-section">
+            <img src="imagens/zelda-ocarina.jpg" alt="The Legend of Zelda: Ocarina of Time">
+            <div class="game-text">
+                <h2>1998 - The Legend of Zelda: Ocarina of Time</h2>
+                <p><strong>Empresa:</strong> Nintendo</p>
+                <p>Um dos jogos mais aclamados de todos os tempos, “Ocarina of Time” trouxe uma nova dimensão à narrativa e à jogabilidade 3D, estabelecendo padrões para a indústria.</p>
+            </div>
+        </section>
+
+        <!-- 2003 -->
+        <section class="game-section">
+            <img src="imagens/gta-san-andreas.jpg" alt="GTA San Andreas">
+            <div class="game-text">
+                <h2>2003 - GTA: San Andreas</h2>
+                <p><strong>Empresa:</strong> Rockstar Games</p>
+                <p>Com um mundo aberto vasto e liberdade inédita, “GTA: San Andreas” redefiniu os jogos sandbox e se tornou um fenômeno cultural global.</p>
+            </div>
+        </section>
+
+        <!-- 2008 -->
+        <section class="game-section">
+            <img src="imagens/minecraft.jpg" alt="Minecraft">
+            <div class="game-text">
+                <h2>2008 - Minecraft</h2>
+                <p><strong>Criador:</strong> Markus Persson (Notch)</p>
+                <p>“Minecraft” trouxe uma nova forma de jogar, com liberdade total para criar e explorar mundos. Tornou-se um dos jogos mais vendidos da história.</p>
+            </div>
+        </section>
+
+        <!-- 2013 -->
+        <section class="game-section">
+            <img src="imagens/the-last-of-us.jpg" alt="The Last of Us">
+            <div class="game-text">
+                <h2>2013 - The Last of Us</h2>
+                <p><strong>Empresa:</strong> Naughty Dog</p>
+                <p>Com uma narrativa cinematográfica e personagens marcantes, “The Last of Us” elevou o patamar de storytelling nos videogames.</p>
+            </div>
+        </section>
+
+        <!-- 2018 -->
+        <section class="game-section">
+            <img src="imagens/god-of-war.jpg" alt="God of War 2018">
+            <div class="game-text">
+                <h2>2018 - God of War</h2>
+                <p><strong>Empresa:</strong> Santa Monica Studio</p>
+                <p>O retorno de Kratos marcou uma reinvenção da franquia, com uma história profunda e uma nova abordagem de combate, consolidando o PlayStation como referência em narrativa.</p>
+            </div>
+        </section>
+
+        <!-- 2023 -->
+        <section class="game-section">
+            <img src="imagens/zelda-totk.jpg" alt="Zelda Tears of the Kingdom">
+            <div class="game-text">
+                <h2>2023 - The Legend of Zelda: Tears of the Kingdom</h2>
+                <p><strong>Empresa:</strong> Nintendo</p>
+                <p>Expansão criativa do universo de Breath of the Wild, “Tears of the Kingdom” reforça o domínio da Nintendo na criação de experiências imersivas e inovadoras.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <h2>Descrições Finais</h2>
+        <p>Desenvolvido por <strong>Gabriel Steve de Oliveira</strong></p>
+        <p>Redes sociais:</p>
+        <p>
+            <a href="https://www.instagram.com/seuusuario" target="_blank">Instagram</a> |
+            <a href="https://www.facebook.com/seuusuario" target="_blank">Facebook</a> |
+            <a href="https://www.linkedin.com/in/seuusuario" target="_blank">LinkedIn</a>
+        </p>
+        <p>&copy; 2025 - Projeto História dos Games</p>
+    </footer>
+</body>
+
+</html>

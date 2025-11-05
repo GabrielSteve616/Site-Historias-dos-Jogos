@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>História dos Jogos</title>
+    <style>
+        :root {
+            --preto: #111;
+            --cinza: #f4f4f4;
+            --branco: #ffffff;
+            --azul-detalhe: #007bff;
+            --cinza-escuro: #333;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: var(--cinza);
+            color: var(--preto);
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Cabeçalho */
+        header {
+            background-color: var(--branco);
+            color: var(--preto);
+            text-align: center;
+            padding: 2em 1em;
+            border-bottom: 4px solid var(--azul-detalhe);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.4em;
+        }
+
+        header h4 {
+            font-weight: normal;
+            margin-top: 10px;
+            color: #555;
+        }
+
+        /* Botões de navegação */
+        .navigation {
+            text-align: center;
+            margin: 25px 0;
+        }
+
+        button {
+            background-color: var(--azul-detalhe);
+            color: var(--branco);
+            border: none;
+            padding: 12px 24px;
+            margin: 8px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+        }
+
+        button:hover {
+            background-color: var(--cinza-escuro);
+            color: var(--branco);
+        }
+
+        /* Estrutura principal */
+        main {
+            padding: 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        /* Seções dos jogos */
+        .game-section {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: var(--branco);
+            border-radius: 12px;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 25px;
+            padding: 20px;
+            gap: 20px;
+            border-left: 6px solid var(--azul-detalhe);
+        }
+
+        .game-section:nth-child(even) {
+            flex-direction: row-reverse;
+            border-left: none;
+            border-right: 6px solid var(--azul-detalhe);
+        }
+
+        .game-section img {
+            width: 40%;
+            border-radius: 10px;
+            object-fit: cover;
+            border: 3px solid #ddd;
+        }
+
+        .game-text {
+            width: 55%;
+        }
+
+        .game-text h2 {
+            margin: 0 0 10px;
+            color: var(--azul-detalhe);
+        }
+
+        .game-text p {
+            margin: 6px 0;
+            color: #222;
+        }
+
+        /* Rodapé */
+        footer {
+            background-color: var(--preto);
+            color: var(--branco);
+            text-align: center;
+            padding: 2em 1em;
+            margin-top: 30px;
+        }
+
+        footer a {
+            color: var(--azul-detalhe);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsivo */
+        @media (max-width: 768px) {
+            .game-section {
+                flex-direction: column;
+            }
+
+            .game-section img,
+            .game-text {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>História dos Consoles Sony - PlayStation</h1>
+    </header>
+
+    <main>
+                <!-- Navegação -->
+        <div class="navigation">
+            <a href="Historiajogos.html"><button>História dos Jogos</button></a>
+            <a href="index.html"><button>Telai-Inicia</button></a>
+            <a href="Evoluçãocontroles.html"><button>Evolução dos Controles</button></a>
+        </div>
+                <!-- Introdução -->
+         <section style="max-width: 900px; margin: auto; text-align: justify;">
+            <h2 style="text-align:center;">Um trabalho focado em mostrar umas das cultars recentes mas antiga focando um pouco na historia dos games digitais focando principalmente na SONY</h2>
+            <p>
+                Aqui Mostro os consoles da Sony desde o primeiro PlayStation até o mais recente PlayStation 5, destacando suas inovações, jogos icônicos e impacto na indústria dos videogames.
+            </p>
+        </section>
+
+        <!-- PlayStation 1 -->
+        <section class="console-section">
+            <img src="imagens/ps1.jpg" alt="PlayStation 1">
+            <div class="console-text">
+                <h2>PlayStation (PS1)</h2>
+                <p><strong>Lançamento:</strong> 3 de dezembro de 1994 (Japão)</p>
+                <p><strong>Primeiro jogo:</strong> Ridge Racer</p>
+                <p>O console que iniciou tudo. O PS1 revolucionou o mercado com jogos em CD, gráficos 3D e títulos marcantes como Final Fantasy VII, Crash Bandicoot e Metal Gear Solid.</p>
+            </div>
+        </section>
+
+        <!-- PlayStation 2 -->
+        <section class="console-section">
+            <img src="imagens/ps2.jpg" alt="PlayStation 2">
+            <div class="console-text">
+                <h2>PlayStation 2 (PS2)</h2>
+                <p><strong>Lançamento:</strong> 4 de março de 2000 (Japão)</p>
+                <p><strong>Primeiro jogo:</strong> Ridge Racer V</p>
+                <p>O PS2 é o console mais vendido da história. Com suporte a DVD e uma biblioteca imensa, trouxe clássicos como GTA: San Andreas, Shadow of the Colossus e God of War.</p>
+            </div>
+        </section>
+
+        <!-- PlayStation 3 -->
+        <section class="console-section">
+            <img src="imagens/ps3.jpg" alt="PlayStation 3">
+            <div class="console-text">
+                <h2>PlayStation 3 (PS3)</h2>
+                <p><strong>Lançamento:</strong> 11 de novembro de 2006 (Japão)</p>
+                <p><strong>Primeiro jogo:</strong> Resistance: Fall of Man</p>
+                <p>O PS3 introduziu o Blu-ray, gráficos em alta definição e conexão online com a PSN. Consoles como Uncharted e The Last of Us marcaram a geração.</p>
+            </div>
+        </section>
+
+        <!-- PlayStation 4 -->
+        <section class="console-section">
+            <img src="imagens/ps4.jpg" alt="PlayStation 4">
+            <div class="console-text">
+                <h2>PlayStation 4 (PS4)</h2>
+                <p><strong>Lançamento:</strong> 15 de novembro de 2013 (EUA)</p>
+                <p><strong>Primeiro jogo:</strong> Killzone: Shadow Fall</p>
+                <p>O PS4 consolidou a Sony com foco em jogos de narrativa e gráficos impressionantes. Títulos como God of War (2018) e Horizon Zero Dawn definiram a geração.</p>
+            </div>
+        </section>
+
+        <!-- PlayStation 5 -->
+        <section class="console-section">
+            <img src="imagens/ps5.jpg" alt="PlayStation 5">
+            <div class="console-text">
+                <h2>PlayStation 5 (PS5)</h2>
+                <p><strong>Lançamento:</strong> 12 de novembro de 2020 (EUA)</p>
+                <p><strong>Primeiro jogo:</strong> Astro’s Playroom</p>
+                <p>O PS5 trouxe um novo patamar em desempenho e imersão, com SSD ultrarrápido, gráficos 4K e o controle DualSense, que redefine a experiência tátil dos jogos.</p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <h2>Descrições Finais</h2>
+        <p>Desenvolvido por <strong>Gabriel Steve de Olveira</strong></p>
+        <p>Redes sociais:</p>
+        <p>
+            <a href="https://www.instagram.com/seuusuario" target="_blank">Instagram</a> |
+            <a href="https://www.facebook.com/seuusuario" target="_blank">Facebook</a> |
+            <a href="https://www.linkedin.com/in/seuusuario" target="_blank">LinkedIn</a>
+        </p>
+        <p>&copy; 2025 - Projeto História dos Games</p>
+    </footer>
+</body>
+
+</html>

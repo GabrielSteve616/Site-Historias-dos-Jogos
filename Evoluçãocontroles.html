@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Evolução dos Controles</title>
+    <style>
+        :root {
+            --azul-detalhe: #007bff;
+            --preto: #111;
+            --cinza-escuro: #333;
+            --cinza-claro: #f0f0f0;
+            --branco: #fff;
+        }
+
+        body {
+            font-family: "Segoe UI", Arial, sans-serif;
+            background-color: var(--cinza-claro);
+            color: var(--cinza-escuro);
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Cabeçalho */
+        header {
+            background-color: var(--branco);
+            color: var(--preto);
+            text-align: center;
+            padding: 2em 1em;
+            border-bottom: 4px solid var(--azul-detalhe);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.6em;
+            color: var(--preto);
+        }
+
+        header h4 {
+            font-weight: normal;
+            margin-top: 10px;
+            color: #555;
+        }
+
+        /* Navegação */
+        .navigation {
+            text-align: center;
+            margin: 25px 0;
+        }
+
+        button {
+            background-color: var(--azul-detalhe);
+            color: var(--branco);
+            border: none;
+            padding: 12px 24px;
+            margin: 8px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+        }
+
+        button:hover {
+            background-color: var(--cinza-escuro);
+            color: var(--branco);
+        }
+
+        /* Seções de controle */
+        .control-section {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: var(--branco);
+            padding: 25px;
+            margin: 25px auto;
+            max-width: 1000px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            gap: 20px;
+            border-left: 6px solid var(--azul-detalhe);
+        }
+
+        .control-section:nth-child(even) {
+            flex-direction: row-reverse;
+            border-left: none;
+            border-right: 6px solid var(--azul-detalhe);
+        }
+
+        .control-section img {
+            width: 40%;
+            border-radius: 10px;
+            object-fit: cover;
+            border: 3px solid var(--cinza-claro);
+        }
+
+        .control-text {
+            width: 55%;
+        }
+
+        .control-text h2 {
+            margin-top: 0;
+            color: var(--azul-detalhe);
+        }
+
+        .control-text p {
+            margin: 6px 0;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .control-section {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .control-section:nth-child(even) {
+                flex-direction: column;
+            }
+
+            .control-text,
+            .control-section img {
+                width: 100%;
+            }
+        }
+
+        /* Rodapé */
+        footer {
+            background-color: var(--preto);
+            color: var(--branco);
+            text-align: center;
+            padding: 2.5em 1em;
+            margin-top: 40px;
+        }
+
+        footer a {
+            color: var(--azul-detalhe);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Evolução dos Controles</h1>
+        <h4>Dos primeiros joysticks aos controles inteligentes do futuro</h4>
+    </header>
+
+    <!-- Navegação -->
+    <div class="navigation">
+        <a href="Historiaconsole.html"><button>História dos Consoles</button></a>
+        <a href="index.html"><button>Tela Inicial</button></a>
+        <a href="Historiajogos.html"><button>História dos Jogos</button></a>
+    </div>
+
+    <main>
+        <!-- 1 -->
+        <section class="control-section">
+            <img src="imagens/atari-joystick.jpg" alt="Controle Atari 2600">
+            <div class="control-text">
+                <h2>1977 - Atari 2600</h2>
+                <p><strong>Empresa:</strong> Atari</p>
+                <p>O clássico controle com um único botão e manche direcional. Simples, mas revolucionário para a época, foi o padrão dos primeiros consoles domésticos.</p>
+            </div>
+        </section>
+
+        <!-- 2 -->
+        <section class="control-section">
+            <img src="imagens/nes-controller.jpg" alt="Controle NES Nintendo">
+            <div class="control-text">
+                <h2>1983 - Nintendo Entertainment System (NES)</h2>
+                <p><strong>Empresa:</strong> Nintendo</p>
+                <p>Primeiro controle a usar o formato retangular e o direcional em cruz (D-Pad), criado por Gunpei Yokoi, trazendo precisão e conforto para os jogadores.</p>
+            </div>
+        </section>
+
+        <!-- 3 -->
+        <section class="control-section">
+            <img src="imagens/sega-genesis-controller.jpg" alt="Controle Sega Mega Drive">
+            <div class="control-text">
+                <h2>1988 - Sega Mega Drive</h2>
+                <p><strong>Empresa:</strong> Sega</p>
+                <p>Com três botões frontais e design ergonômico, o controle do Mega Drive foi projetado para jogos de ação mais rápidos e dinâmicos.</p>
+            </div>
+        </section>
+
+        <!-- 4 -->
+        <section class="control-section">
+            <img src="imagens/snes-controller.jpg" alt="Controle Super Nintendo">
+            <div class="control-text">
+                <h2>1990 - Super Nintendo</h2>
+                <p><strong>Empresa:</strong> Nintendo</p>
+                <p>Introduziu botões de ombro (L e R) e mais comandos, definindo o layout básico dos controles modernos.</p>
+            </div>
+        </section>
+
+        <!-- 5 -->
+        <section class="control-section">
+            <img src="imagens/playstation1-controller.jpg" alt="Controle PlayStation 1">
+            <div class="control-text">
+                <h2>1994 - PlayStation</h2>
+                <p><strong>Empresa:</strong> Sony</p>
+                <p>Com formato anatômico e botões icônicos (X, O, Quadrado e Triângulo), o DualShock trouxe vibração e analógicos, marcando o início da era moderna dos controles.</p>
+            </div>
+        </section>
+
+        <!-- 6 -->
+        <section class="control-section">
+            <img src="imagens/n64-controller.jpg" alt="Controle Nintendo 64">
+            <div class="control-text">
+                <h2>1996 - Nintendo 64</h2>
+                <p><strong>Empresa:</strong> Nintendo</p>
+                <p>Apresentou o primeiro joystick analógico em um controle de console, essencial para jogos em 3D, como Super Mario 64.</p>
+            </div>
+        </section>
+
+        <!-- 7 -->
+        <section class="control-section">
+            <img src="imagens/xbox-controller.jpg" alt="Controle Xbox Original">
+            <div class="control-text">
+                <h2>2001 - Xbox Original</h2>
+                <p><strong>Empresa:</strong> Microsoft</p>
+                <p>O controle “Duke” trouxe gatilhos analógicos e vibração aprimorada, destacando o foco da Microsoft em realismo e conforto.</p>
+            </div>
+        </section>
+
+        <!-- 8 -->
+        <section class="control-section">
+            <img src="imagens/wii-remote.jpg" alt="Controle Nintendo Wii">
+            <div class="control-text">
+                <h2>2006 - Wii Remote</h2>
+                <p><strong>Empresa:</strong> Nintendo</p>
+                <p>O controle revolucionou o mercado com sensores de movimento, transformando o corpo do jogador em parte da experiência.</p>
+            </div>
+        </section>
+
+        <!-- 9 -->
+        <section class="control-section">
+            <img src="imagens/ps5-dualsense.jpg" alt="Controle PS5 DualSense">
+            <div class="control-text">
+                <h2>2020 - PlayStation 5 DualSense</h2>
+                <p><strong>Empresa:</strong> Sony</p>
+                <p>Com feedback háptico e gatilhos adaptáveis, o DualSense oferece sensações táteis realistas, elevando a imersão dos jogos.</p>
+            </div>
+        </section>
+
+        <!-- 10 -->
+        <section class="control-section">
+            <img src="imagens/xbox-elite.jpg" alt="Controle Xbox Elite Series 2">
+            <div class="control-text">
+                <h2>2021 - Xbox Elite Series 2</h2>
+                <p><strong>Empresa:</strong> Microsoft</p>
+                <p>Com materiais premium, personalização total e bateria recarregável interna, o Elite 2 representa o ápice da evolução dos controles modernos.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <h2>Descrições Finais</h2>
+        <p>Desenvolvido por <strong>Gabriel Steve de Oliveira</strong></p>
+        <p>Redes sociais:</p>
+        <p>
+            <a href="https://www.instagram.com/gabriel_steve616" target="_blank">Instagram</a> |
+            <a href="https://www.facebook.com/seuusuario" target="_blank">Facebook</a> |
+            <a href="https://www.linkedin.com/in/seuusuario" target="_blank">LinkedIn</a>
+        </p>
+        <p>&copy; 2025 - Projeto História dos Games</p>
+    </footer>
+</body>
+
+</html>

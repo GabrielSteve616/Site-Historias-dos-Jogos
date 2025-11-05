@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>História dos Games - Projeto</title>
+    <style>
+        :root {
+            --azul-detalhe: #007bff;
+            --preto: #111;
+            --cinza-escuro: #333;
+            --cinza-claro: #f0f0f0;
+            --branco: #fff;
+        }
+
+        body {
+            font-family: "Segoe UI", Arial, sans-serif;
+            background-color: var(--cinza-claro);
+            color: var(--cinza-escuro);
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Cabeçalho */
+        header {
+            background-color: var(--branco);
+            color: var(--preto);
+            text-align: center;
+            padding: 2em 1em;
+            border-bottom: 4px solid var(--azul-detalhe);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.6em;
+            color: var(--preto);
+        }
+
+        header h4 {
+            font-weight: normal;
+            margin-top: 10px;
+            color: #555;
+        }
+
+        /* Navegação */
+        .navigation {
+            text-align: center;
+            margin: 25px 0;
+        }
+
+        button {
+            background-color: var(--azul-detalhe);
+            color: var(--branco);
+            border: none;
+            padding: 12px 24px;
+            margin: 8px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+        }
+
+        button:hover {
+            background-color: var(--cinza-escuro);
+            color: var(--branco);
+        }
+
+        /* Títulos */
+        h2, h3, h4 {
+            color: var(--preto);
+        }
+
+        /* Seções alternadas com imagem e texto */
+        .console-section {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: var(--branco);
+            padding: 25px;
+            margin: 25px auto;
+            max-width: 1000px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            gap: 20px;
+            border-left: 6px solid var(--azul-detalhe);
+        }
+
+        .console-section:nth-child(even) {
+            flex-direction: row-reverse;
+            border-left: none;
+            border-right: 6px solid var(--azul-detalhe);
+        }
+
+        .console-section img {
+            width: 40%;
+            border-radius: 10px;
+            object-fit: cover;
+            border: 3px solid var(--cinza-claro);
+        }
+
+        .console-text {
+            width: 55%;
+        }
+
+        .console-text h3 {
+            margin-top: 0;
+            color: var(--azul-detalhe);
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .console-section {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .console-section:nth-child(even) {
+                flex-direction: column;
+            }
+
+            .console-text, .console-section img {
+                width: 100%;
+            }
+        }
+
+        /* Rodapé */
+        footer {
+            background-color: var(--preto);
+            color: var(--branco);
+            text-align: center;
+            padding: 2.5em 1em;
+            margin-top: 40px;
+        }
+
+        footer a {
+            color: var(--azul-detalhe);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>História dos Games</h1>
+        <h4>Uma jornada pela evolução dos videogames e sua influência cultural e econômica.</h4>
+    </header>
+
+    <main>
+        <!-- Navegação -->
+        <div class="navigation">
+            <a href="Historiaconsole.html"><button>História dos Consoles</button></a>
+            <a href="Historiajogos.html"><button>História dos Jogos</button></a>
+            <a href="Evoluçãocontroles.html"><button>Evolução dos Controles</button></a>
+        </div>
+
+        <!-- Introdução -->
+         <section style="max-width: 900px; margin: auto; text-align: justify;">
+            <h2 style="text-align:center;">Um trabalho focado em mostrar umas das cultars recentes mas antiga focando um pouco na historia dos games digitais focando principalmente na SONY</h2>
+            <p>
+                Os videogames ultrapassaram o simples papel de entretenimento para se tornarem parte essencial da cultura moderna.
+                Hoje, eles influenciam a música, o cinema, a arte e a forma como as pessoas se conectam globalmente.
+                Além disso, o mercado de games movimenta bilhões de dólares por ano, superando até a indústria do cinema e da música combinadas.
+                De um simples passatempo, os jogos evoluíram para uma poderosa força econômica e social, moldando gerações e impulsionando a inovação tecnológica.
+            </p>
+        </section>
+        <section style="max-width: 900px; margin: auto; text-align: justify;">
+            <h2 style="text-align:center;">Como os Videogames se Tornaram uma Cultura e uma Força Econômica</h2>
+            <p>
+                Os videogames ultrapassaram o simples papel de entretenimento para se tornarem parte essencial da cultura moderna.
+                Hoje, eles influenciam a música, o cinema, a arte e a forma como as pessoas se conectam globalmente.
+                Além disso, o mercado de games movimenta bilhões de dólares por ano, superando até a indústria do cinema e da música combinadas.
+                De um simples passatempo, os jogos evoluíram para uma poderosa força econômica e social, moldando gerações e impulsionando a inovação tecnológica.
+            </p>
+        </section>
+
+        <!-- Seções alternadas -->
+        <section class="console-section">
+            <img src="imagens/playstation.jpg" alt="Imagem do PlayStation">
+            <div class="console-text">
+                <h3>PlayStation</h3>
+                <p>
+                    O <strong>PlayStation</strong> marcou uma nova era dos videogames ao introduzir jogos em CD e gráficos 3D.
+                    Lançado pela Sony em 1994, ele se destacou pela inovação tecnológica e uma biblioteca de jogos icônicos.
+                    Seu sucesso transformou a Sony em uma das maiores potências da indústria dos games.
+                </p>
+            </div>
+        </section>
+
+        <section class="console-section">
+            <img src="imagens/nintendo.jpg" alt="Imagem da Nintendo">
+            <div class="console-text">
+                <h3>Nintendo</h3>
+                <p>
+                    A <strong>Nintendo</strong> é pioneira no mundo dos games, responsável por personagens lendários como Mario e Zelda.
+                    Desde o NES até o Nintendo Switch, a empresa sempre priorizou criatividade, diversão familiar e inovação.
+                </p>
+            </div>
+        </section>
+
+        <section class="console-section">
+            <img src="imagens/xbox.jpg" alt="Imagem do Xbox">
+            <div class="console-text">
+                <h3>Xbox</h3>
+                <p>
+                    O <strong>Xbox</strong>, criado pela Microsoft, introduziu o jogo online com o Xbox Live e revolucionou a experiência multiplayer.
+                    Hoje, destaca-se pela integração entre PC e console e pelo serviço Xbox Game Pass, que transformou o acesso aos jogos digitais.
+                </p>
+            </div>
+        </section>
+
+        <section class="console-section">
+            <img src="imagens/sega.jpg" alt="Imagem da Sega">
+            <div class="console-text">
+                <h3>Sega</h3>
+                <p>
+                    A <strong>Sega</strong> foi uma das maiores rivais da Nintendo nos anos 80 e 90, com consoles como o Mega Drive e o Dreamcast.
+                    Mesmo após deixar o mercado de hardware, continua relevante com franquias clássicas como Sonic the Hedgehog.
+                </p>
+            </div>
+        </section>
+
+        <section class="console-section">
+            <img src="imagens/atari.jpg" alt="Imagem do Atari">
+            <div class="console-text">
+                <h3>Atari</h3>
+                <p>
+                    O <strong>Atari</strong> é o pioneiro dos videogames domésticos. Com o Atari 2600, popularizou os jogos eletrônicos nos lares
+                    e lançou as bases para toda a indústria moderna dos games.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <h2>Descrições Finais</h2>
+        <p>Desenvolvido por <strong>Gabriel Steve de Olveira</strong></p>
+        <p>Redes sociais:</p>
+        <p>
+            <a href="https://www.instagram.com/gabriel_steve616?igsh=MTB3eDJ4NW54a2hhcw==" target="_blank">Instagram</a> |
+            <a href="https://www.facebook.com/seuusuario" target="_blank">Facebook</a> |
+            <a href="https://www.linkedin.com/in/seuusuario" target="_blank">LinkedIn</a>
+        </p>
+        <p>&copy; 2025 - Projeto História dos Games</p>
+    </footer>
+</body>
+
+</html>
