@@ -2,147 +2,182 @@
 <html lang="pt-BR">
 
 <head>
-    <meta charset="UTF-8">
-    <title>História dos Games - Projeto</title>
-    <style>
-        :root {
-            --azul-detalhe: #007bff;
-            --preto: #111;
-            --cinza-escuro: #333;
-            --cinza-claro: #f0f0f0;
-            --branco: #fff;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Evolução dos Controles</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
-        body {
-            font-family: "Segoe UI", Arial, sans-serif;
-            background-color: var(--cinza-claro);
-            color: var(--cinza-escuro);
-            margin: 0;
-            padding: 0;
-        }
+    :root {
+      --preto: #0f0f0f;
+      --cinza: #f4f4f4;
+      --branco: #ffffff;
+      --azul-detalhe: #333;
+      --cinza-escuro: #222;
+      --sombra: rgba(0, 0, 0, 0.15);
+    }
 
-        /* Cabeçalho */
-        header {
-            background-color: var(--branco);
-            color: var(--preto);
-            text-align: center;
-            padding: 2em 1em;
-            border-bottom: 4px solid var(--azul-detalhe);
-        }
+    body {
+      font-family: "Poppins", Arial, sans-serif;
+      background-color: var(--cinza);
+      color: var(--preto);
+      margin: 0;
+      padding: 0;
+    }
 
-        header h1 {
-            margin: 0;
-            font-size: 2.6em;
-            color: var(--preto);
-        }
+    /* Cabeçalho */
+    header {
+      background: linear-gradient(135deg, var(--azul-detalhe), #0056b3);
+      color: var(--branco);
+      text-align: center;
+      padding: 2.5em 1em;
+      box-shadow: 0 3px 8px var(--sombra);
+    }
 
-        header h4 {
-            font-weight: normal;
-            margin-top: 10px;
-            color: #555;
-        }
+    header h1 {
+      margin: 0;
+      font-size: 2.6em;
+      letter-spacing: 1px;
+    }
 
-        /* Navegação */
-        .navigation {
-            text-align: center;
-            margin: 25px 0;
-        }
+    header h4 {
+      font-weight: 400;
+      color: #dcdcdc;
+      margin-top: 10px;
+    }
 
-        button {
-            background-color: var(--azul-detalhe);
-            color: var(--branco);
-            border: none;
-            padding: 12px 24px;
-            margin: 8px;
-            border-radius: 8px;
-            cursor: pointer;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
-        }
+    /* Navegação */
+    .navigation {
+      text-align: center;
+      margin: 25px 0;
+    }
 
-        button:hover {
-            background-color: var(--cinza-escuro);
-            color: var(--branco);
-        }
+    button {
+      background-color: var(--azul-detalhe);
+      color: var(--branco);
+      border: none;
+      padding: 12px 26px;
+      margin: 8px;
+      border-radius: 10px;
+      cursor: pointer;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      transition: all 0.3s ease;
+      box-shadow: 0 2px 6px var(--sombra);
+    }
 
-        /* Títulos */
-        h2, h3, h4 {
-            color: var(--preto);
-        }
+    button:hover {
+      background-color: var(--cinza-escuro);
+      transform: scale(1.05);
+    }
 
-        /* Seções alternadas com imagem e texto */
-        .console-section {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            background: var(--branco);
-            padding: 25px;
-            margin: 25px auto;
-            max-width: 1000px;
-            border-radius: 12px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            gap: 20px;
-            border-left: 6px solid var(--azul-detalhe);
-        }
+    /* Estrutura principal */
+    main {
+      padding: 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
 
-        .console-section:nth-child(even) {
-            flex-direction: row-reverse;
-            border-left: none;
-            border-right: 6px solid var(--azul-detalhe);
-        }
+    /* Seções dos controles */
+    .control-section {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: var(--branco);
+      border-radius: 16px;
+      box-shadow: 0 3px 10px var(--sombra);
+      margin-bottom: 30px;
+      padding: 25px;
+      gap: 25px;
+      border-left: 6px solid var(--azul-detalhe);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
 
-        .console-section img {
-            width: 40%;
-            border-radius: 10px;
-            object-fit: cover;
-            border: 3px solid var(--cinza-claro);
-        }
+    .control-section:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 6px 15px var(--sombra);
+    }
 
-        .console-text {
-            width: 55%;
-        }
+    .control-section:nth-child(even) {
+      flex-direction: row-reverse;
+      border-left: none;
+      border-right: 6px solid var(--azul-detalhe);
+    }
 
-        .console-text h3 {
-            margin-top: 0;
-            color: var(--azul-detalhe);
-        }
+    .control-section img {
+      width: 40%;
+      border-radius: 12px;
+      object-fit: cover;
+      border: 3px solid #ddd;
+      transition: transform 0.3s ease;
+    }
 
-        /* Responsividade */
-        @media (max-width: 768px) {
-            .console-section {
-                flex-direction: column;
-                text-align: center;
-            }
+    .control-section img:hover {
+      transform: scale(1.03);
+    }
 
-            .console-section:nth-child(even) {
-                flex-direction: column;
-            }
+    .control-text {
+      width: 55%;
+    }
 
-            .console-text, .console-section img {
-                width: 100%;
-            }
-        }
+    .control-text h2 {
+      margin: 0 0 10px;
+      color: var(--azul-detalhe);
+      font-size: 1.5em;
+    }
 
-        /* Rodapé */
-        footer {
-            background-color: var(--preto);
-            color: var(--branco);
-            text-align: center;
-            padding: 2.5em 1em;
-            margin-top: 40px;
-        }
+    .control-text p {
+      margin: 6px 0;
+      color: var(--cinza-escuro);
+      line-height: 1.6;
+    }
 
-        footer a {
-            color: var(--azul-detalhe);
-            text-decoration: none;
-            font-weight: 500;
-        }
+    /* Rodapé */
+    footer {
+      background-color: var(--preto);
+      color: var(--branco);
+      text-align: center;
+      padding: 2em 1em;
+      margin-top: 40px;
+      border-top: 4px solid var(--azul-detalhe);
+    }
 
-        footer a:hover {
-            text-decoration: underline;
-        }
-    </style>
+    footer h2 {
+      margin-bottom: 10px;
+      color: var(--azul-detalhe);
+    }
+
+    footer a {
+      color: var(--azul-detalhe);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* Responsivo */
+    @media (max-width: 768px) {
+      .control-section {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .control-section img,
+      .control-text {
+        width: 100%;
+      }
+
+      header h1 {
+        font-size: 2em;
+      }
+
+      .control-text h2 {
+        font-size: 1.3em;
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -243,8 +278,9 @@
         <p>Redes sociais:</p>
         <p>
             <a href="https://www.instagram.com/gabriel_steve616?igsh=MTB3eDJ4NW54a2hhcw==" target="_blank">Instagram</a> |
-            <a href="https://www.facebook.com/seuusuario" target="_blank">Facebook</a> |
-            <a href="https://www.linkedin.com/in/seuusuario" target="_blank">LinkedIn</a>
+            <a href="https://www.facebook.com/share/1BXgoaGVBG/" target="_blank">Facebook</a> |
+            <a href="https://www.linkedin.com/in/gabriel-steve-de-oliveira-2a47331ba?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">LinkedIn</a>
+            <a href="https://github.com/GabrielSteve616" target="_blank">GuitHub</a> 
         </p>
         <p>&copy; 2025 - Projeto História dos Games</p>
     </footer>
