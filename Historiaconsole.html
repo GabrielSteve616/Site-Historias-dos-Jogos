@@ -7,198 +7,208 @@
   <title>História dos Consoles PlayStation</title>
 
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
-    :root {
-      --preto: #0f0f0f;
-      --cinza: #f4f4f4;
-      --branco: #ffffff;
-      --azul-detalhe: #333;
-      --cinza-escuro: #222;
-      --sombra: rgba(0, 0, 0, 0.15);
-    }
+:root {
+  --preto: #0f0f0f;
+  --cinza: #f4f4f4;
+  --branco: #ffffff;
+  --azul-detalhe: #333;
+  --cinza-escuro: #222;
+  --sombra: rgba(0, 0, 0, 0.15);
 
-    * {
-      box-sizing: border-box;
-    }
+  /* 🎯 VARIÁVEIS DE TAMANHO DAS IMAGENS */
+  --img-width-desktop: 40%;   /* largura relativa no desktop */
+  --img-max-desktop: 300px;   /* largura máxima no desktop */
+  --img-width-mobile: 80%;    /* largura relativa no celular */
+  --img-max-mobile: 220px;    /* largura máxima no celular */
+  --img-radius: 12px;         /* borda arredondada */
+  --img-border: 3px solid #ddd; /* borda da imagem */
+}
 
-    body {
-      font-family: "Poppins", Arial, sans-serif;
-      background-color: var(--cinza);
-      color: var(--preto);
-      margin: 0;
-      padding: 0;
-    }
+* {
+  box-sizing: border-box;
+}
 
-    /* Cabeçalho */
-    header {
-      background: linear-gradient(135deg, var(--azul-detalhe), #0056b3);
-      color: var(--branco);
-      text-align: center;
-      padding: 2.5em 1em;
-      box-shadow: 0 3px 8px var(--sombra);
-    }
+body {
+  font-family: "Poppins", Arial, sans-serif;
+  background-color: var(--cinza);
+  color: var(--preto);
+  margin: 0;
+  padding: 0;
+}
 
-    header h1 {
-      margin: 0;
-      font-size: 2.4em;
-      letter-spacing: 1px;
-    }
+/* Cabeçalho */
+header {
+  background: linear-gradient(135deg, var(--azul-detalhe), #0056b3);
+  color: var(--branco);
+  text-align: center;
+  padding: 2.5em 1em;
+  box-shadow: 0 3px 8px var(--sombra);
+}
 
-    header h4 {
-      font-weight: 400;
-      color: #dcdcdc;
-      margin-top: 10px;
-    }
+header h1 {
+  margin: 0;
+  font-size: 2.4em;
+  letter-spacing: 1px;
+}
 
-    /* Navegação */
-    .navigation {
-      text-align: center;
-      margin: 25px 0;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 10px;
-    }
+header h4 {
+  font-weight: 400;
+  color: #dcdcdc;
+  margin-top: 10px;
+}
 
-    button {
-      background-color: var(--azul-detalhe);
-      color: var(--branco);
-      border: none;
-      padding: 12px 22px;
-      border-radius: 10px;
-      cursor: pointer;
-      font-weight: 600;
-      letter-spacing: 0.5px;
-      transition: all 0.3s ease;
-      box-shadow: 0 2px 6px var(--sombra);
-    }
+/* Navegação */
+.navigation {
+  text-align: center;
+  margin: 25px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
 
-    button:hover {
-      background-color: var(--cinza-escuro);
-      transform: scale(1.05);
-    }
+button {
+  background-color: var(--azul-detalhe);
+  color: var(--branco);
+  border: none;
+  padding: 12px 22px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 6px var(--sombra);
+}
 
-    /* Estrutura principal */
-    main {
-      padding: 20px;
-      max-width: 1100px;
-      margin: auto;
-    }
+button:hover {
+  background-color: var(--cinza-escuro);
+  transform: scale(1.05);
+}
 
-    /* Seções dos consoles */
-    .console-section {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      background-color: var(--branco);
-      border-radius: 16px;
-      box-shadow: 0 3px 10px var(--sombra);
-      margin-bottom: 30px;
-      padding: 25px;
-      gap: 25px;
-      border-left: 6px solid var(--azul-detalhe);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
+/* Estrutura principal */
+main {
+  padding: 20px;
+  max-width: 1100px;
+  margin: auto;
+}
 
-    .console-section:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 6px 15px var(--sombra);
-    }
+/* Seções dos consoles */
+.console-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--branco);
+  border-radius: 16px;
+  box-shadow: 0 3px 10px var(--sombra);
+  margin-bottom: 30px;
+  padding: 25px;
+  gap: 25px;
+  border-left: 6px solid var(--azul-detalhe);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
-    .console-section:nth-child(even) {
-      flex-direction: row-reverse;
-      border-left: none;
-      border-right: 6px solid var(--azul-detalhe);
-    }
+.console-section:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 15px var(--sombra);
+}
 
-    .console-section img {
-      width: 40%;
-      max-width: 300px;
-      height: auto;
-      border-radius: 12px;
-      object-fit: cover;
-      border: 3px solid #ddd;
-      transition: transform 0.3s ease;
-    }
+.console-section:nth-child(even) {
+  flex-direction: row-reverse;
+  border-left: none;
+  border-right: 6px solid var(--azul-detalhe);
+}
 
-    .console-section img:hover {
-      transform: scale(1.03);
-    }
+/* 🎮 Imagens dos consoles — controladas pelas variáveis globais */
+.console-section img {
+  width: var(--img-width-desktop);
+  max-width: var(--img-max-desktop);
+  height: auto;
+  border-radius: var(--img-radius);
+  object-fit: cover;
+  border: var(--img-border);
+  transition: transform 0.3s ease;
+}
 
-    .console-text {
-      width: 55%;
-    }
+.console-section img:hover {
+  transform: scale(1.03);
+}
 
-    .console-text h2 {
-      margin: 0 0 10px;
-      color: var(--azul-detalhe);
-      font-size: 1.5em;
-    }
+/* Texto */
+.console-text {
+  width: 55%;
+}
 
-    .console-text p {
-      margin: 6px 0;
-      color: var(--cinza-escuro);
-      line-height: 1.6;
-    }
+.console-text h2 {
+  margin: 0 0 10px;
+  color: var(--azul-detalhe);
+  font-size: 1.5em;
+}
 
-    /* Rodapé */
-    footer {
-      background-color: var(--preto);
-      color: var(--branco);
-      text-align: center;
-      padding: 2em 1em;
-      margin-top: 40px;
-      border-top: 4px solid var(--azul-detalhe);
-    }
+.console-text p {
+  margin: 6px 0;
+  color: var(--cinza-escuro);
+  line-height: 1.6;
+}
 
-    footer h2 {
-      margin-bottom: 10px;
-      color: var(--azul-detalhe);
-    }
+/* Rodapé */
+footer {
+  background-color: var(--preto);
+  color: var(--branco);
+  text-align: center;
+  padding: 2em 1em;
+  margin-top: 40px;
+  border-top: 4px solid var(--azul-detalhe);
+}
 
-    footer a {
-      color: var(--azul-detalhe);
-      text-decoration: none;
-      font-weight: 500;
-    }
+footer h2 {
+  margin-bottom: 10px;
+  color: var(--azul-detalhe);
+}
 
-    footer a:hover {
-      text-decoration: underline;
-    }
+footer a {
+  color: var(--azul-detalhe);
+  text-decoration: none;
+  font-weight: 500;
+}
 
-    /* Responsivo */
-    @media (max-width: 768px) {
-      header h1 {
-        font-size: 1.8em;
-      }
+footer a:hover {
+  text-decoration: underline;
+}
 
-      .console-section {
-        flex-direction: column;
-        text-align: center;
-        padding: 15px;
-      }
+/* Responsivo */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 1.8em;
+  }
 
-      .console-section img {
-        width: 80%;
-        max-width: 220px;
-        margin: 0 auto 15px;
-        display: block;
-      }
+  .console-section {
+    flex-direction: column;
+    text-align: center;
+    padding: 15px;
+  }
 
-      .console-text {
-        width: 100%;
-      }
+  .console-section img {
+    width: var(--img-width-mobile);
+    max-width: var(--img-max-mobile);
+    margin: 0 auto 15px;
+    display: block;
+  }
 
-      .console-text h2 {
-        font-size: 1.2em;
-      }
+  .console-text {
+    width: 100%;
+  }
 
-      .navigation button {
-        width: 90%;
-        max-width: 300px;
-      }
-    }
+  .console-text h2 {
+    font-size: 1.2em;
+  }
+
+  .navigation button {
+    width: 90%;
+    max-width: 300px;
+  }
+}
   </style>
 </head>
 
