@@ -79,7 +79,7 @@
     }
 
     /* Seções dos controles */
-    .control-section {
+    .console-section {
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -93,18 +93,18 @@
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
-    .control-section:hover {
+    .console-section:hover {
       transform: translateY(-4px);
       box-shadow: 0 6px 15px var(--sombra);
     }
 
-    .control-section:nth-child(even) {
+    .console-section:nth-child(even) {
       flex-direction: row-reverse;
       border-left: none;
       border-right: 6px solid var(--azul-detalhe);
     }
 
-    .control-section img {
+    .console-section img {
       width: 40%;
       border-radius: 12px;
       object-fit: cover;
@@ -112,21 +112,21 @@
       transition: transform 0.3s ease;
     }
 
-    .control-section img:hover {
+    .console-section img:hover {
       transform: scale(1.03);
     }
 
-    .control-text {
+    .console-text {
       width: 55%;
     }
 
-    .control-text h2 {
+    .console-text h3 {
       margin: 0 0 10px;
       color: var(--azul-detalhe);
       font-size: 1.5em;
     }
 
-    .control-text p {
+    .console-text p {
       margin: 6px 0;
       color: var(--cinza-escuro);
       line-height: 1.6;
@@ -159,13 +159,13 @@
 
     /* Responsivo */
     @media (max-width: 768px) {
-      .control-section {
+      .console-section {
         flex-direction: column;
         text-align: center;
       }
 
-      .control-section img,
-      .control-text {
+      .console-section img,
+      .console-text {
         width: 100%;
       }
 
@@ -173,7 +173,7 @@
         font-size: 2em;
       }
 
-      .control-text h2 {
+      .console-text h3 {
         font-size: 1.3em;
       }
     }
@@ -181,109 +181,111 @@
 </head>
 
 <body>
-    <header>
-        <h1>História dos Games</h1>
-        <h4>Uma jornada pela evolução dos videogames e sua influência cultural e econômica.</h4>
-    </header>
+  <header>
+    <h1>História dos Games</h1>
+    <h4>Uma jornada pela evolução dos videogames e sua influência cultural e econômica.</h4>
+  </header>
 
-    <main>
-        <!-- Navegação -->
-        <div class="navigation">
-            <a href="Historiaconsole.html"><button>História dos Consoles</button></a>
-            <a href="Historiajogos.html"><button>História dos Jogos</button></a>
-            <a href="Evoluçãocontroles.html"><button>Evolução dos Controles</button></a>
-        </div>
+  <main>
+    <!-- Navegação -->
+    <div class="navigation">
+      <a href="Historiaconsole.html"><button>História dos Consoles</button></a>
+      <a href="Historiajogos.html"><button>História dos Jogos</button></a>
+      <a href="Evoluçãocontroles.html"><button>Evolução dos Controles</button></a>
+    </div>
 
-        <!-- Introdução -->
-         <section style="max-width: 900px; margin: auto; text-align: justify;">
-            <h2 style="text-align:center;">Um trabalho focado em mostrar umas das cultars recentes mas antiga focando um pouco na historia dos games digitais focando principalmente na SONY</h2>
-            <p>
-                Os videogames ultrapassaram o simples papel de entretenimento para se tornarem parte essencial da cultura moderna.
-                Hoje, eles influenciam a música, o cinema, a arte e a forma como as pessoas se conectam globalmente.
-                Além disso, o mercado de games movimenta bilhões de dólares por ano, superando até a indústria do cinema e da música combinadas.
-                De um simples passatempo, os jogos evoluíram para uma poderosa força econômica e social, moldando gerações e impulsionando a inovação tecnológica.
-            </p>
-        </section>
-        <section style="max-width: 900px; margin: auto; text-align: justify;">
-            <h2 style="text-align:center;">Como os Videogames se Tornaram uma Cultura e uma Força Econômica</h2>
-            <p>
-                Os videogames ultrapassaram o simples papel de entretenimento para se tornarem parte essencial da cultura moderna.
-                Hoje, eles influenciam a música, o cinema, a arte e a forma como as pessoas se conectam globalmente.
-                Além disso, o mercado de games movimenta bilhões de dólares por ano, superando até a indústria do cinema e da música combinadas.
-                De um simples passatempo, os jogos evoluíram para uma poderosa força econômica e social, moldando gerações e impulsionando a inovação tecnológica.
-            </p>
-        </section>
+    <!-- Introdução -->
+    <section style="max-width: 900px; margin: auto; text-align: justify;">
+      <h2 style="text-align:center;">
+        Um trabalho focado em mostrar uma das culturas mais recentes, porém antigas, explorando a história dos games digitais, com ênfase especial na Sony.
+      </h2>
+      <p>
+        Os videogames ultrapassaram o simples papel de entretenimento para se tornarem parte essencial da cultura moderna.
+        Hoje, eles influenciam a música, o cinema, a arte e a forma como as pessoas se conectam globalmente.
+        Além disso, o mercado de games movimenta bilhões de dólares por ano, superando até as indústrias do cinema e da música combinadas.
+        De um simples passatempo, os jogos evoluíram para uma poderosa força econômica e social, moldando gerações e impulsionando a inovação tecnológica.
+      </p>
+    </section>
 
-        <!-- Seções alternadas -->
-        <section class="console-section">
-            <img src="imagens/playstation.jpg" alt="Imagem do PlayStation">
-            <div class="console-text">
-                <h3>PlayStation</h3>
-                <p>
-                    O <strong>PlayStation</strong> marcou uma nova era dos videogames ao introduzir jogos em CD e gráficos 3D.
-                    Lançado pela Sony em 1994, ele se destacou pela inovação tecnológica e uma biblioteca de jogos icônicos.
-                    Seu sucesso transformou a Sony em uma das maiores potências da indústria dos games.
-                </p>
-            </div>
-        </section>
+    <section style="max-width: 900px; margin: auto; text-align: justify;">
+      <h2 style="text-align:center;">Como os Videogames se Tornaram uma Cultura e uma Força Econômica</h2>
+      <p>
+        Os videogames deixaram de ser apenas uma forma de lazer para se consolidarem como um fenômeno cultural e econômico.
+        Atualmente, influenciam diversos setores, como música, cinema e tecnologia, além de promoverem comunidades e eventos em escala mundial.
+        O mercado de games já ultrapassou a arrecadação de outras grandes indústrias do entretenimento, tornando-se um dos pilares da economia digital.
+      </p>
+    </section>
 
-        <section class="console-section">
-            <img src="imagens/nintendo.jpg" alt="Imagem da Nintendo">
-            <div class="console-text">
-                <h3>Nintendo</h3>
-                <p>
-                    A <strong>Nintendo</strong> é pioneira no mundo dos games, responsável por personagens lendários como Mario e Zelda.
-                    Desde o NES até o Nintendo Switch, a empresa sempre priorizou criatividade, diversão familiar e inovação.
-                </p>
-            </div>
-        </section>
-
-        <section class="console-section">
-            <img src="imagens/xbox.jpg" alt="Imagem do Xbox">
-            <div class="console-text">
-                <h3>Xbox</h3>
-                <p>
-                    O <strong>Xbox</strong>, criado pela Microsoft, introduziu o jogo online com o Xbox Live e revolucionou a experiência multiplayer.
-                    Hoje, destaca-se pela integração entre PC e console e pelo serviço Xbox Game Pass, que transformou o acesso aos jogos digitais.
-                </p>
-            </div>
-        </section>
-
-        <section class="console-section">
-            <img src="imagens/sega.jpg" alt="Imagem da Sega">
-            <div class="console-text">
-                <h3>Sega</h3>
-                <p>
-                    A <strong>Sega</strong> foi uma das maiores rivais da Nintendo nos anos 80 e 90, com consoles como o Mega Drive e o Dreamcast.
-                    Mesmo após deixar o mercado de hardware, continua relevante com franquias clássicas como Sonic the Hedgehog.
-                </p>
-            </div>
-        </section>
-
-        <section class="console-section">
-            <img src="imagens/atari.jpg" alt="Imagem do Atari">
-            <div class="console-text">
-                <h3>Atari</h3>
-                <p>
-                    O <strong>Atari</strong> é o pioneiro dos videogames domésticos. Com o Atari 2600, popularizou os jogos eletrônicos nos lares
-                    e lançou as bases para toda a indústria moderna dos games.
-                </p>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <h2>Descrições Finais</h2>
-        <p>Desenvolvido por <strong>Gabriel Steve de Olveira</strong></p>
-        <p>Redes sociais:</p>
+    <!-- Seções alternadas -->
+    <section class="console-section">
+      <img src="imagens/playstation.jpg" alt="Imagem do PlayStation">
+      <div class="console-text">
+        <h3>PlayStation</h3>
         <p>
-            <a href="https://www.instagram.com/gabriel_steve616?igsh=MTB3eDJ4NW54a2hhcw==" target="_blank">Instagram</a> |
-            <a href="https://www.facebook.com/share/1BXgoaGVBG/" target="_blank">Facebook</a> |
-            <a href="https://www.linkedin.com/in/gabriel-steve-de-oliveira-2a47331ba?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">LinkedIn</a>
-            <a href="https://github.com/GabrielSteve616" target="_blank">GuitHub</a> 
+          O <strong>PlayStation</strong> marcou uma nova era dos videogames ao introduzir jogos em CD e gráficos tridimensionais.
+          Lançado pela Sony em 1994, destacou-se pela inovação tecnológica e por uma biblioteca repleta de títulos icônicos.
+          Seu sucesso consolidou a Sony como uma das maiores potências da indústria dos games.
         </p>
-        <p>&copy; 2025 - Projeto História dos Games</p>
-    </footer>
+      </div>
+    </section>
+
+    <section class="console-section">
+      <img src="imagens/nintendo.jpg" alt="Imagem da Nintendo">
+      <div class="console-text">
+        <h3>Nintendo</h3>
+        <p>
+          A <strong>Nintendo</strong> é uma das pioneiras do mundo dos games, responsável por personagens lendários como Mario, Link e Donkey Kong.
+          Desde o NES até o Nintendo Switch, a empresa sempre priorizou criatividade, diversão em família e inovação tecnológica.
+        </p>
+      </div>
+    </section>
+
+    <section class="console-section">
+      <img src="imagens/xbox.jpg" alt="Imagem do Xbox">
+      <div class="console-text">
+        <h3>Xbox</h3>
+        <p>
+          O <strong>Xbox</strong>, criado pela Microsoft, revolucionou a experiência de jogo online com o serviço Xbox Live.
+          Hoje, destaca-se pela integração entre PC e console e pelo Xbox Game Pass, que transformou a forma de acessar jogos digitais.
+        </p>
+      </div>
+    </section>
+
+    <section class="console-section">
+      <img src="imagens/sega.jpg" alt="Imagem da Sega">
+      <div class="console-text">
+        <h3>Sega</h3>
+        <p>
+          A <strong>Sega</strong> foi uma das maiores rivais da Nintendo nas décadas de 1980 e 1990, com consoles marcantes como o Mega Drive e o Dreamcast.
+          Mesmo após deixar o mercado de hardware, continua relevante com franquias clássicas como <em>Sonic the Hedgehog</em>.
+        </p>
+      </div>
+    </section>
+
+    <section class="console-section">
+      <img src="imagens/atari.jpg" alt="Imagem do Atari">
+      <div class="console-text">
+        <h3>Atari</h3>
+        <p>
+          O <strong>Atari</strong> foi o pioneiro dos videogames domésticos. Com o Atari 2600, popularizou os jogos eletrônicos nos lares
+          e lançou as bases para toda a indústria moderna dos games.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <h2>Descrições Finais</h2>
+    <p>Desenvolvido por <strong>Gabriel Steve de Oliveira</strong></p>
+    <p>Redes sociais:</p>
+    <p>
+      <a href="https://www.instagram.com/gabriel_steve616?igsh=MTB3eDJ4NW54a2hhcw==" target="_blank">Instagram</a> |
+      <a href="https://www.facebook.com/share/1BXgoaGVBG/" target="_blank">Facebook</a> |
+      <a href="https://www.linkedin.com/in/gabriel-steve-de-oliveira-2a47331ba" target="_blank">LinkedIn</a> |
+      <a href="https://github.com/GabrielSteve616" target="_blank">GitHub</a>
+    </p>
+    <p>&copy; 2025 - Projeto História dos Games</p>
+  </footer>
 </body>
 
 </html>
