@@ -98,7 +98,7 @@
       box-shadow: 0 6px 15px var(--sombra);
     }
 
-    /* alterna imagem/texto no desktop */
+    /* Alterna imagem/texto no desktop */
     .control-section:nth-of-type(even) {
       flex-direction: row-reverse;
       border-left: none;
@@ -162,14 +162,20 @@
     @media (max-width: 768px) {
       .control-section {
         flex-direction: column !important;
+        align-items: center;
         text-align: center;
         border-left: 6px solid var(--azul-detalhe);
         border-right: none !important;
       }
 
-      .control-section img,
+      .control-section img {
+        width: 100%;
+        max-width: 400px;
+      }
+
       .control-text {
         width: 100%;
+        margin-top: 15px;
       }
 
       header h1 {
@@ -207,15 +213,6 @@
         Hoje, eles influenciam a música, o cinema, a arte e a forma como as pessoas se conectam globalmente.
         Além disso, o mercado de games movimenta bilhões de dólares por ano, superando até as indústrias do cinema e da música combinadas.
         De um simples passatempo, os jogos evoluíram para uma poderosa força econômica e social, moldando gerações e impulsionando a inovação tecnológica.
-      </p>
-    </section>
-
-    <section style="max-width: 900px; margin: auto; text-align: justify;">
-      <h2 style="text-align:center;">Como os Videogames se Tornaram uma Cultura e uma Força Econômica</h2>
-      <p>
-        Os videogames deixaram de ser apenas uma forma de lazer para se consolidarem como um fenômeno cultural e econômico.
-        Atualmente, influenciam diversos setores, como música, cinema e tecnologia, além de promoverem comunidades e eventos em escala mundial.
-        O mercado de games já ultrapassou a arrecadação de outras grandes indústrias do entretenimento, tornando-se um dos pilares da economia digital.
       </p>
     </section>
 
