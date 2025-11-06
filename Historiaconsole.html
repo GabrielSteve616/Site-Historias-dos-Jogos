@@ -28,9 +28,9 @@
       color: var(--preto);
       margin: 0;
       padding: 0;
+      overflow-x: hidden;
     }
 
-    /* Cabeçalho */
     header {
       background: linear-gradient(135deg, var(--azul-detalhe), #0056b3);
       color: var(--branco);
@@ -51,7 +51,6 @@
       margin-top: 10px;
     }
 
-    /* Navegação */
     .navigation {
       text-align: center;
       margin: 25px 0;
@@ -79,23 +78,48 @@
       transform: scale(1.05);
     }
 
-    /* Estrutura principal */
     main {
       padding: 20px;
       max-width: 1100px;
       margin: auto;
     }
 
-    /* Seções dos consoles */
+    .intro {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .intro h2 {
+      color: var(--azul-detalhe);
+      font-size: 1.8em;
+    }
+
+    .intro p {
+      color: var(--cinza-escuro);
+      line-height: 1.6;
+      font-size: 1.1em;
+      margin-top: 10px;
+    }
+
+    /* === Seções dos consoles === */
     .console-section {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
       background-color: var(--branco);
       border-radius: 16px;
       box-shadow: 0 3px 10px var(--sombra);
       margin-bottom: 30px;
       padding: 25px;
+      gap: 25px;
       border-left: 6px solid var(--azul-detalhe);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
-      text-align: center;
+    }
+
+    .console-section:nth-child(even) {
+      flex-direction: row-reverse;
+      border-left: none;
+      border-right: 6px solid var(--azul-detalhe);
     }
 
     .console-section:hover {
@@ -104,13 +128,10 @@
     }
 
     .console-section img {
-      width: 85%;
-      max-width: 350px;
-      height: auto;
+      width: 40%;
       border-radius: 12px;
       object-fit: cover;
       border: 3px solid #ddd;
-      margin-bottom: 15px;
       transition: transform 0.3s ease;
     }
 
@@ -119,12 +140,13 @@
     }
 
     .console-text {
-      width: 100%;
-      text-align: center;
+      width: 55%;
+      overflow-wrap: break-word;
+      word-break: break-word;
     }
 
     .console-text h2 {
-      margin: 10px 0;
+      margin: 0 0 10px;
       color: var(--azul-detalhe);
       font-size: 1.5em;
     }
@@ -133,10 +155,8 @@
       margin: 6px 0;
       color: var(--cinza-escuro);
       line-height: 1.6;
-      font-size: 1em;
     }
 
-    /* Rodapé */
     footer {
       background-color: var(--preto);
       color: var(--branco);
@@ -161,19 +181,33 @@
       text-decoration: underline;
     }
 
-    /* Responsivo */
-    @media (max-width: 768px) {
-      header h1 {
-        font-size: 1.8em;
+    /* === Responsivo === */
+    @media (max-width: 900px) {
+      .console-section {
+        flex-direction: column !important;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+        padding: 15px;
       }
 
-      .console-section {
-        padding: 20px;
+      .console-section:nth-child(even) {
+        flex-direction: column !important;
+        border-left: 6px solid var(--azul-detalhe);
+        border-right: none;
       }
 
       .console-section img {
-        width: 90%;
-        max-width: 280px;
+        width: 100%;
+        max-width: 380px;
+        height: auto;
+      }
+
+      .console-text {
+        width: 100%;
+        padding: 0 10px;
+        text-align: center;
       }
 
       .console-text h2 {
@@ -182,6 +216,14 @@
 
       .console-text p {
         font-size: 1em;
+      }
+
+      header h1 {
+        font-size: 2em;
+      }
+
+      main {
+        padding: 10px;
       }
 
       .navigation {
@@ -213,7 +255,7 @@
       <h2>A jornada da Sony no mundo dos games</h2>
       <p>
         Desde o primeiro PlayStation em 1994, a Sony moldou a história dos videogames com inovação, tecnologia e experiências inesquecíveis.
-        Cada console trouxe uma revolução — desde os CDs e DVDs até o SSD ultrarrápido e o DualSense — marcando gerações de jogadores.
+        Cada console trouxe uma revolução — dos CDs e DVDs ao SSD ultrarrápido e ao DualSense — marcando gerações de jogadores.
       </p>
     </section>
 
@@ -223,7 +265,7 @@
       <div class="console-text">
         <h2>PlayStation (PS1)</h2>
         <p><strong>Lançamento:</strong> 3 de dezembro de 1994 (Japão)</p>
-        <p>O PS1 marcou o início de uma nova era nos videogames. Com jogos em CD e gráficos 3D, trouxe títulos lendários como <em>Final Fantasy VII</em>, <em>Crash Bandicoot</em> e <em>Metal Gear Solid</em>.</p>
+        <p>O PS1 marcou o início de uma nova era. Com jogos em CD e gráficos 3D, trouxe títulos lendários como <em>Final Fantasy VII</em>, <em>Crash Bandicoot</em> e <em>Metal Gear Solid</em>.</p>
       </div>
     </section>
 
@@ -233,7 +275,7 @@
       <div class="console-text">
         <h2>PlayStation 2 (PS2)</h2>
         <p><strong>Lançamento:</strong> 4 de março de 2000 (Japão)</p>
-        <p>O console mais vendido da história. Com suporte a DVD e uma imensa biblioteca de jogos, trouxe clássicos como <em>GTA: San Andreas</em> e <em>God of War</em>.</p>
+        <p>O console mais vendido da história. Com suporte a DVD e uma biblioteca gigantesca, trouxe clássicos como <em>GTA: San Andreas</em> e <em>God of War</em>.</p>
       </div>
     </section>
 
@@ -243,7 +285,7 @@
       <div class="console-text">
         <h2>PlayStation 3 (PS3)</h2>
         <p><strong>Lançamento:</strong> 11 de novembro de 2006 (Japão)</p>
-        <p>O PS3 introduziu o Blu-ray e os gráficos em alta definição. Jogos como <em>Uncharted</em> e <em>The Last of Us</em> mostraram o poder cinematográfico dos games.</p>
+        <p>O PS3 introduziu o Blu-ray e os gráficos em alta definição. Jogos como <em>Uncharted</em> e <em>The Last of Us</em> elevaram o padrão de qualidade nos games.</p>
       </div>
     </section>
 
@@ -253,7 +295,7 @@
       <div class="console-text">
         <h2>PlayStation 4 (PS4)</h2>
         <p><strong>Lançamento:</strong> 15 de novembro de 2013 (EUA)</p>
-        <p>Com foco em desempenho e jogos imersivos, o PS4 consolidou franquias marcantes como <em>Horizon Zero Dawn</em> e <em>God of War (2018)</em>.</p>
+        <p>Com foco em desempenho e gráficos impressionantes, o PS4 consolidou franquias como <em>Horizon Zero Dawn</em> e <em>God of War (2018)</em>.</p>
       </div>
     </section>
 
@@ -263,7 +305,7 @@
       <div class="console-text">
         <h2>PlayStation 5 (PS5)</h2>
         <p><strong>Lançamento:</strong> 12 de novembro de 2020 (EUA)</p>
-        <p>Com SSD ultrarrápido e o inovador controle DualSense, o PS5 elevou a imersão e o realismo a um novo patamar na história dos videogames.</p>
+        <p>Com SSD ultrarrápido e o inovador controle DualSense, o PS5 levou a imersão e o realismo a um novo patamar na história dos videogames.</p>
       </div>
     </section>
   </main>
