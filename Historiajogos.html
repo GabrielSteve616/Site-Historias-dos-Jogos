@@ -29,6 +29,7 @@
       color: var(--preto);
     }
 
+    /* Cabeçalho */
     header {
       background: linear-gradient(135deg, var(--azul-detalhe), #0056b3);
       color: var(--branco);
@@ -49,6 +50,7 @@
       margin-top: 10px;
     }
 
+    /* Navegação */
     .navigation {
       display: flex;
       justify-content: center;
@@ -75,18 +77,19 @@
       transform: scale(1.05);
     }
 
+    /* Estrutura principal */
     main {
       padding: 20px;
-      max-width: 1100px;
+      max-width: 1200px;
       margin: auto;
     }
 
-    /* layout padrão: lado a lado */
+    /* Seções dos jogos */
     .game-section {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 25px;
+      gap: 30px;
       background-color: var(--branco);
       border-radius: 16px;
       box-shadow: 0 3px 10px var(--sombra);
@@ -96,6 +99,7 @@
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
+    /* alternar lado */
     .game-section:nth-child(even) {
       flex-direction: row-reverse;
       border-left: none;
@@ -109,7 +113,7 @@
 
     .game-section img {
       width: 45%;
-      max-width: 450px;
+      height: auto;
       border-radius: 12px;
       border: 3px solid #ddd;
       object-fit: cover;
@@ -138,6 +142,7 @@
       font-size: 1em;
     }
 
+    /* Rodapé */
     footer {
       background-color: var(--preto);
       color: var(--branco);
@@ -157,7 +162,7 @@
       text-decoration: underline;
     }
 
-    /* modo celular */
+    /* Responsivo - celular */
     @media (max-width: 900px) {
       .game-section {
         flex-direction: column;
@@ -181,18 +186,13 @@
       }
     }
 
-    @media (max-width: 480px) {
-      .game-text p {
-        font-size: 0.9em;
-      }
-    }
   </style>
 </head>
 
 <body>
   <header>
     <h1>História dos Jogos</h1>
-    <h4>A linha do tempo da evolução dos videogames — de 1958 até os dias atuais</h4>
+    <h4>Uma linha do tempo da evolução dos videogames — de 1958 até os dias atuais</h4>
   </header>
 
   <div class="navigation">
