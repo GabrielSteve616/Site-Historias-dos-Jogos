@@ -78,8 +78,8 @@
       margin: auto;
     }
 
-    /* Seções dos controles */
-    .console-section {
+    /* Seções dos controles (mantido igual ao base) */
+    .control-section {
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -93,18 +93,18 @@
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
-    .console-section:hover {
+    .control-section:hover {
       transform: translateY(-4px);
       box-shadow: 0 6px 15px var(--sombra);
     }
 
-    .console-section:nth-child(even) {
+    .control-section:nth-child(even) {
       flex-direction: row-reverse;
       border-left: none;
       border-right: 6px solid var(--azul-detalhe);
     }
 
-    .console-section img {
+    .control-section img {
       width: 40%;
       border-radius: 12px;
       object-fit: cover;
@@ -112,21 +112,21 @@
       transition: transform 0.3s ease;
     }
 
-    .console-section img:hover {
+    .control-section img:hover {
       transform: scale(1.03);
     }
 
-    .console-text {
+    .control-text {
       width: 55%;
     }
 
-    .console-text h3 {
+    .control-text h2 {
       margin: 0 0 10px;
       color: var(--azul-detalhe);
       font-size: 1.5em;
     }
 
-    .console-text p {
+    .control-text p {
       margin: 6px 0;
       color: var(--cinza-escuro);
       line-height: 1.6;
@@ -159,13 +159,13 @@
 
     /* Responsivo */
     @media (max-width: 768px) {
-      .console-section {
+      .control-section {
         flex-direction: column;
         text-align: center;
       }
 
-      .console-section img,
-      .console-text {
+      .control-section img,
+      .control-text {
         width: 100%;
       }
 
@@ -173,7 +173,7 @@
         font-size: 2em;
       }
 
-      .console-text h3 {
+      .control-text h2 {
         font-size: 1.3em;
       }
     }
@@ -216,11 +216,11 @@
       </p>
     </section>
 
-    <!-- Seções alternadas -->
-    <section class="console-section">
+    <!-- Seções alternadas (como no código base) -->
+    <section class="control-section">
       <img src="imagens/playstation.jpg" alt="Imagem do PlayStation">
-      <div class="console-text">
-        <h3>PlayStation</h3>
+      <div class="control-text">
+        <h2>PlayStation</h2>
         <p>
           O <strong>PlayStation</strong> marcou uma nova era dos videogames ao introduzir jogos em CD e gráficos tridimensionais.
           Lançado pela Sony em 1994, destacou-se pela inovação tecnológica e por uma biblioteca repleta de títulos icônicos.
@@ -229,10 +229,10 @@
       </div>
     </section>
 
-    <section class="console-section">
+    <section class="control-section">
       <img src="imagens/nintendo.jpg" alt="Imagem da Nintendo">
-      <div class="console-text">
-        <h3>Nintendo</h3>
+      <div class="control-text">
+        <h2>Nintendo</h2>
         <p>
           A <strong>Nintendo</strong> é uma das pioneiras do mundo dos games, responsável por personagens lendários como Mario, Link e Donkey Kong.
           Desde o NES até o Nintendo Switch, a empresa sempre priorizou criatividade, diversão em família e inovação tecnológica.
@@ -240,10 +240,10 @@
       </div>
     </section>
 
-    <section class="console-section">
+    <section class="control-section">
       <img src="imagens/xbox.jpg" alt="Imagem do Xbox">
-      <div class="console-text">
-        <h3>Xbox</h3>
+      <div class="control-text">
+        <h2>Xbox</h2>
         <p>
           O <strong>Xbox</strong>, criado pela Microsoft, revolucionou a experiência de jogo online com o serviço Xbox Live.
           Hoje, destaca-se pela integração entre PC e console e pelo Xbox Game Pass, que transformou a forma de acessar jogos digitais.
@@ -251,10 +251,10 @@
       </div>
     </section>
 
-    <section class="console-section">
+    <section class="control-section">
       <img src="imagens/sega.jpg" alt="Imagem da Sega">
-      <div class="console-text">
-        <h3>Sega</h3>
+      <div class="control-text">
+        <h2>Sega</h2>
         <p>
           A <strong>Sega</strong> foi uma das maiores rivais da Nintendo nas décadas de 1980 e 1990, com consoles marcantes como o Mega Drive e o Dreamcast.
           Mesmo após deixar o mercado de hardware, continua relevante com franquias clássicas como <em>Sonic the Hedgehog</em>.
@@ -262,10 +262,10 @@
       </div>
     </section>
 
-    <section class="console-section">
+    <section class="control-section">
       <img src="imagens/atari.jpg" alt="Imagem do Atari">
-      <div class="console-text">
-        <h3>Atari</h3>
+      <div class="control-text">
+        <h2>Atari</h2>
         <p>
           O <strong>Atari</strong> foi o pioneiro dos videogames domésticos. Com o Atari 2600, popularizou os jogos eletrônicos nos lares
           e lançou as bases para toda a indústria moderna dos games.
@@ -279,7 +279,7 @@
     <p>Desenvolvido por <strong>Gabriel Steve de Oliveira</strong></p>
     <p>Redes sociais:</p>
     <p>
-      <a href="https://www.instagram.com/gabriel_steve616?igsh=MTB3eDJ4NW54a2hhcw==" target="_blank">Instagram</a> |
+      <a href="https://www.instagram.com/gabriel_steve616" target="_blank">Instagram</a> |
       <a href="https://www.facebook.com/share/1BXgoaGVBG/" target="_blank">Facebook</a> |
       <a href="https://www.linkedin.com/in/gabriel-steve-de-oliveira-2a47331ba" target="_blank">LinkedIn</a> |
       <a href="https://github.com/GabrielSteve616" target="_blank">GitHub</a>
