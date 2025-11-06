@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>História dos Jogos</title>
+
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
@@ -14,6 +16,15 @@
       --azul-detalhe: #333;
       --cinza-escuro: #222;
       --sombra: rgba(0, 0, 0, 0.15);
+
+      --img-width-desktop: 40%;
+      --img-max-desktop: 320px;
+      --img-width-mobile: 85%;
+      --img-max-mobile: 250px;
+    }
+
+    * {
+      box-sizing: border-box;
     }
 
     body {
@@ -35,11 +46,11 @@
 
     header h1 {
       margin: 0;
-      font-size: 2.6em;
+      font-size: 2.4em;
       letter-spacing: 1px;
     }
 
-    header h3 {
+    header h4 {
       font-weight: 400;
       color: #dcdcdc;
       margin-top: 10px;
@@ -49,14 +60,17 @@
     .navigation {
       text-align: center;
       margin: 25px 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
     }
 
     button {
       background-color: var(--azul-detalhe);
       color: var(--branco);
       border: none;
-      padding: 12px 26px;
-      margin: 8px;
+      padding: 12px 22px;
       border-radius: 10px;
       cursor: pointer;
       font-weight: 600;
@@ -104,7 +118,9 @@
     }
 
     .game-section img {
-      width: 40%;
+      width: var(--img-width-desktop);
+      max-width: var(--img-max-desktop);
+      height: auto;
       border-radius: 12px;
       object-fit: cover;
       border: 3px solid #ddd;
@@ -158,27 +174,47 @@
 
     /* Responsivo */
     @media (max-width: 768px) {
+      header h1 {
+        font-size: 1.8em;
+      }
+
       .game-section {
-        flex-direction: column !important;
+        flex-direction: column;
         text-align: center;
+        padding: 20px;
+        gap: 15px;
       }
 
       .game-section img {
-        width: 100%;
-        max-width: 500px;
+        width: var(--img-width-mobile);
+        max-width: var(--img-max-mobile);
+        margin: 0 auto;
+        display: block;
       }
 
       .game-text {
         width: 100%;
-        margin-top: 15px;
-      }
-
-      header h1 {
-        font-size: 2em;
+        text-align: center;
+        padding: 0 10px;
       }
 
       .game-text h2 {
         font-size: 1.3em;
+        margin-bottom: 8px;
+      }
+
+      .game-text p {
+        font-size: 1em;
+        line-height: 1.6;
+      }
+
+      .navigation {
+        flex-direction: column;
+      }
+
+      .navigation button {
+        width: 90%;
+        max-width: 300px;
       }
     }
   </style>
@@ -187,35 +223,162 @@
 <body>
   <header>
     <h1>História dos Jogos</h1>
-    <h3>Uma linha do tempo da evolução dos videogames, de 1958 até os dias atuais</h3>
+    <h4>Uma linha do tempo da evolução dos videogames — de 1958 até os dias atuais</h4>
   </header>
 
-  <main>
-    <div class="navigation">
-      <a href="Historiaconsole.html"><button>História dos Consoles</button></a>
-      <a href="index.html"><button>Tela Inicial</button></a>
-      <a href="Evoluçãocontroles.html"><button>Evolução dos Controles</button></a>
-    </div>
+  <div class="navigation">
+    <a href="index.html"><button>Tela Inicial</button></a>
+    <a href="Historiaconsole.html"><button>História dos Consoles</button></a>
+    <a href="Evoluçãocontroles.html"><button>Evolução dos Controles</button></a>
+  </div>
 
-    <!-- Exemplo -->
+  <main>
+    <!-- 1958 -->
     <section class="game-section">
       <img src="imagens/tennis-for-two.jpg" alt="Tennis for Two">
       <div class="game-text">
-        <h2>1958 - Tennis for Two</h2>
+        <h2>1958 — Tennis for Two</h2>
         <p><strong>Criador:</strong> William Higinbotham</p>
-        <p>Considerado o primeiro jogo eletrônico da história, “Tennis for Two” simulava uma partida de tênis em um osciloscópio.</p>
+        <p>Considerado o primeiro jogo eletrônico da história, “Tennis for Two” simulava uma partida de tênis em um osciloscópio. Foi o início de uma nova forma de entretenimento interativo.</p>
       </div>
     </section>
 
-    <!-- Continue com as outras seções exatamente como você já tem -->
+    <!-- 1963 -->
+    <section class="game-section">
+      <img src="imagens/spacewar.jpg" alt="Spacewar!">
+      <div class="game-text">
+        <h2>1963 — Spacewar!</h2>
+        <p><strong>Criadores:</strong> Steve Russell e equipe do MIT</p>
+        <p>“Spacewar!” foi um dos primeiros jogos de computador da história, apresentando naves espaciais em combate. Serviu de inspiração direta para os primeiros arcades da década de 1970.</p>
+      </div>
+    </section>
+
+    <!-- 1968 -->
+    <section class="game-section">
+      <img src="imagens/magnavox-odyssey.jpg" alt="Magnavox Odyssey">
+      <div class="game-text">
+        <h2>1968 — Protótipo do Magnavox Odyssey</h2>
+        <p><strong>Criador:</strong> Ralph Baer</p>
+        <p>Ralph Baer desenvolveu o primeiro console doméstico de videogame. Anos depois, o projeto se tornaria o Magnavox Odyssey, lançado oficialmente em 1972.</p>
+      </div>
+    </section>
+
+    <!-- 1973 -->
+    <section class="game-section">
+      <img src="imagens/pong.jpg" alt="Pong">
+      <div class="game-text">
+        <h2>1973 — Pong</h2>
+        <p><strong>Empresa:</strong> Atari</p>
+        <p>“Pong” popularizou os videogames. Simples e viciante, o jogo de tênis virtual foi o primeiro sucesso comercial da história, estabelecendo a Atari como pioneira no mercado.</p>
+      </div>
+    </section>
+
+    <!-- 1978 -->
+    <section class="game-section">
+      <img src="imagens/space-invaders.jpg" alt="Space Invaders">
+      <div class="game-text">
+        <h2>1978 — Space Invaders</h2>
+        <p><strong>Empresa:</strong> Taito</p>
+        <p>O sucesso de “Space Invaders” levou os arcades a um novo patamar, popularizando os fliperamas em todo o mundo e inaugurando a chamada “Era de Ouro dos Videogames”.</p>
+      </div>
+    </section>
+
+    <!-- 1983 -->
+    <section class="game-section">
+      <img src="imagens/mario-bros.jpg" alt="Mario Bros">
+      <div class="game-text">
+        <h2>1983 — Mario Bros.</h2>
+        <p><strong>Empresa:</strong> Nintendo</p>
+        <p>Em meio à crise dos videogames, a Nintendo lançou “Mario Bros.”, apresentando ao mundo o icônico encanador e marcando o início de uma das maiores franquias da história.</p>
+      </div>
+    </section>
+
+    <!-- 1988 -->
+    <section class="game-section">
+      <img src="imagens/sonic.jpg" alt="Sonic the Hedgehog">
+      <div class="game-text">
+        <h2>1988 — Sonic the Hedgehog</h2>
+        <p><strong>Empresa:</strong> Sega</p>
+        <p>Com a chegada do Mega Drive, “Sonic” se tornou o mascote da Sega e um dos maiores ícones da cultura dos videogames, rivalizando com “Mario”.</p>
+      </div>
+    </section>
+
+    <!-- 1993 -->
+    <section class="game-section">
+      <img src="imagens/doom.jpg" alt="Doom">
+      <div class="game-text">
+        <h2>1993 — Doom</h2>
+        <p><strong>Empresa:</strong> id Software</p>
+        <p>“Doom” revolucionou os jogos de tiro em primeira pessoa (FPS) com seus gráficos 3D e jogabilidade intensa. Foi um marco para o futuro dos jogos de ação.</p>
+      </div>
+    </section>
+
+    <!-- 1998 -->
+    <section class="game-section">
+      <img src="imagens/zelda-ocarina.jpg" alt="The Legend of Zelda: Ocarina of Time">
+      <div class="game-text">
+        <h2>1998 — The Legend of Zelda: Ocarina of Time</h2>
+        <p><strong>Empresa:</strong> Nintendo</p>
+        <p>Um dos jogos mais aclamados de todos os tempos, “Ocarina of Time” trouxe uma nova dimensão à narrativa e à jogabilidade 3D, estabelecendo padrões para toda a indústria.</p>
+      </div>
+    </section>
+
+    <!-- 2004 -->
+    <section class="game-section">
+      <img src="imagens/gta-san-andreas.jpg" alt="GTA San Andreas">
+      <div class="game-text">
+        <h2>2004 — GTA: San Andreas</h2>
+        <p><strong>Empresa:</strong> Rockstar Games</p>
+        <p>Com um mundo aberto vasto e liberdade inédita, “GTA: San Andreas” redefiniu os jogos de mundo aberto e se tornou um fenômeno cultural global.</p>
+      </div>
+    </section>
+
+    <!-- 2009 -->
+    <section class="game-section">
+      <img src="imagens/minecraft.jpg" alt="Minecraft">
+      <div class="game-text">
+        <h2>2009 — Minecraft</h2>
+        <p><strong>Criador:</strong> Markus Persson (Notch)</p>
+        <p>“Minecraft” trouxe uma nova forma de jogar, oferecendo liberdade total para criar e explorar mundos. Tornou-se um dos jogos mais vendidos da história.</p>
+      </div>
+    </section>
+
+    <!-- 2013 -->
+    <section class="game-section">
+      <img src="imagens/the-last-of-us.jpg" alt="The Last of Us">
+      <div class="game-text">
+        <h2>2013 — The Last of Us</h2>
+        <p><strong>Empresa:</strong> Naughty Dog</p>
+        <p>Com uma narrativa cinematográfica e personagens marcantes, “The Last of Us” elevou o patamar do storytelling nos videogames.</p>
+      </div>
+    </section>
+
+    <!-- 2018 -->
+    <section class="game-section">
+      <img src="imagens/god-of-war.jpg" alt="God of War 2018">
+      <div class="game-text">
+        <h2>2018 — God of War</h2>
+        <p><strong>Empresa:</strong> Santa Monica Studio</p>
+        <p>O retorno de Kratos marcou a reinvenção da franquia, com uma história profunda e combate renovado, consolidando o PlayStation como referência em narrativa.</p>
+      </div>
+    </section>
+
+    <!-- 2023 -->
+    <section class="game-section">
+      <img src="imagens/zelda-totk.jpg" alt="Zelda: Tears of the Kingdom">
+      <div class="game-text">
+        <h2>2023 — The Legend of Zelda: Tears of the Kingdom</h2>
+        <p><strong>Empresa:</strong> Nintendo</p>
+        <p>Expansão criativa do universo de “Breath of the Wild”, “Tears of the Kingdom” reforça o domínio da Nintendo na criação de experiências imersivas e inovadoras.</p>
+      </div>
+    </section>
   </main>
 
   <footer>
     <h2>Descrições Finais</h2>
     <p>Desenvolvido por <strong>Gabriel Steve de Oliveira</strong></p>
-    <p>Redes sociais:</p>
     <p>
-      <a href="https://www.instagram.com/gabriel_steve616?igsh=MTB3eDJ4NW54a2hhcw==" target="_blank">Instagram</a> |
+      <a href="https://www.instagram.com/gabriel_steve616" target="_blank">Instagram</a> |
       <a href="https://www.facebook.com/share/1BXgoaGVBG/" target="_blank">Facebook</a> |
       <a href="https://www.linkedin.com/in/gabriel-steve-de-oliveira-2a47331ba" target="_blank">LinkedIn</a> |
       <a href="https://github.com/GabrielSteve616" target="_blank">GitHub</a>
@@ -223,4 +386,5 @@
     <p>&copy; 2025 - Projeto História dos Games</p>
   </footer>
 </body>
+
 </html>
