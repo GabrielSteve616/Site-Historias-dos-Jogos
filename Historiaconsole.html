@@ -4,7 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Evolução dos Controles</title>
+  <title>História dos Consoles PlayStation</title>
+
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
@@ -15,6 +16,10 @@
       --azul-detalhe: #333;
       --cinza-escuro: #222;
       --sombra: rgba(0, 0, 0, 0.15);
+    }
+
+    * {
+      box-sizing: border-box;
     }
 
     body {
@@ -36,7 +41,7 @@
 
     header h1 {
       margin: 0;
-      font-size: 2.6em;
+      font-size: 2.4em;
       letter-spacing: 1px;
     }
 
@@ -50,14 +55,17 @@
     .navigation {
       text-align: center;
       margin: 25px 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
     }
 
     button {
       background-color: var(--azul-detalhe);
       color: var(--branco);
       border: none;
-      padding: 12px 26px;
-      margin: 8px;
+      padding: 12px 22px;
       border-radius: 10px;
       cursor: pointer;
       font-weight: 600;
@@ -78,58 +86,54 @@
       margin: auto;
     }
 
-    /* Seções dos controles */
-    .control-section {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
+    /* Seções dos consoles */
+    .console-section {
       background-color: var(--branco);
       border-radius: 16px;
       box-shadow: 0 3px 10px var(--sombra);
       margin-bottom: 30px;
       padding: 25px;
-      gap: 25px;
       border-left: 6px solid var(--azul-detalhe);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
+      text-align: center;
     }
 
-    .control-section:hover {
+    .console-section:hover {
       transform: translateY(-4px);
       box-shadow: 0 6px 15px var(--sombra);
     }
 
-    .control-section:nth-child(even) {
-      flex-direction: row-reverse;
-      border-left: none;
-      border-right: 6px solid var(--azul-detalhe);
-    }
-
-    .control-section img {
-      width: 40%;
+    .console-section img {
+      width: 85%;
+      max-width: 350px;
+      height: auto;
       border-radius: 12px;
       object-fit: cover;
       border: 3px solid #ddd;
+      margin-bottom: 15px;
       transition: transform 0.3s ease;
     }
 
-    .control-section img:hover {
+    .console-section img:hover {
       transform: scale(1.03);
     }
 
-    .control-text {
-      width: 55%;
+    .console-text {
+      width: 100%;
+      text-align: center;
     }
 
-    .control-text h2 {
-      margin: 0 0 10px;
+    .console-text h2 {
+      margin: 10px 0;
       color: var(--azul-detalhe);
       font-size: 1.5em;
     }
 
-    .control-text p {
+    .console-text p {
       margin: 6px 0;
       color: var(--cinza-escuro);
       line-height: 1.6;
+      font-size: 1em;
     }
 
     /* Rodapé */
@@ -159,22 +163,34 @@
 
     /* Responsivo */
     @media (max-width: 768px) {
-      .control-section {
-        flex-direction: column;
-        text-align: center;
-      }
-
-      .control-section img,
-      .control-text {
-        width: 100%;
-      }
-
       header h1 {
-        font-size: 2em;
+        font-size: 1.8em;
       }
 
-      .control-text h2 {
+      .console-section {
+        padding: 20px;
+      }
+
+      .console-section img {
+        width: 90%;
+        max-width: 280px;
+      }
+
+      .console-text h2 {
         font-size: 1.3em;
+      }
+
+      .console-text p {
+        font-size: 1em;
+      }
+
+      .navigation {
+        flex-direction: column;
+      }
+
+      .navigation button {
+        width: 90%;
+        max-width: 300px;
       }
     }
   </style>
@@ -182,155 +198,72 @@
 
 <body>
   <header>
-    <h1>História dos Jogos</h1>
-    <h3>Uma linha do tempo da evolução dos videogames, de 1958 até os dias atuais</h3>
+    <h1>História dos Consoles Sony - PlayStation</h1>
+    <h4>Da estreia em 1994 até a potência do PS5</h4>
   </header>
 
+  <div class="navigation">
+    <a href="index.html"><button>Tela Inicial</button></a>
+    <a href="Historiajogos.html"><button>História dos Jogos</button></a>
+    <a href="Evoluçãocontroles.html"><button>Evolução dos Controles</button></a>
+  </div>
+
   <main>
-    <!-- Navegação -->
-    <div class="navigation">
-      <a href="Historiaconsole.html"><button>História dos Consoles</button></a>
-      <a href="index.html"><button>Tela Inicial</button></a>
-      <a href="Evoluçãocontroles.html"><button>Evolução dos Controles</button></a>
-    </div>
+    <section class="intro">
+      <h2>A jornada da Sony no mundo dos games</h2>
+      <p>
+        Desde o primeiro PlayStation em 1994, a Sony moldou a história dos videogames com inovação, tecnologia e experiências inesquecíveis.
+        Cada console trouxe uma revolução — desde os CDs e DVDs até o SSD ultrarrápido e o DualSense — marcando gerações de jogadores.
+      </p>
+    </section>
 
-    <!-- 1958 -->
-    <section class="game-section">
-      <img src="imagens/tennis-for-two.jpg" alt="Tennis for Two">
-      <div class="game-text">
-        <h2>1958 - Tennis for Two</h2>
-        <p><strong>Criador:</strong> William Higinbotham</p>
-        <p>Considerado o primeiro jogo eletrônico da história, “Tennis for Two” simulava uma partida de tênis em um osciloscópio. Foi o início de uma nova forma de entretenimento interativo.</p>
+    <!-- PS1 -->
+    <section class="console-section">
+      <img src="imagens/ps1.jpg" alt="PlayStation 1">
+      <div class="console-text">
+        <h2>PlayStation (PS1)</h2>
+        <p><strong>Lançamento:</strong> 3 de dezembro de 1994 (Japão)</p>
+        <p>O PS1 marcou o início de uma nova era nos videogames. Com jogos em CD e gráficos 3D, trouxe títulos lendários como <em>Final Fantasy VII</em>, <em>Crash Bandicoot</em> e <em>Metal Gear Solid</em>.</p>
       </div>
     </section>
 
-    <!-- 1963 -->
-    <section class="game-section">
-      <img src="imagens/spacewar.jpg" alt="Spacewar!">
-      <div class="game-text">
-        <h2>1963 - Spacewar!</h2>
-        <p><strong>Criador:</strong> Steve Russell e equipe do MIT</p>
-        <p>“Spacewar!” foi um dos primeiros jogos de computador da história, apresentando naves espaciais duelando no espaço. Serviu de inspiração direta para os primeiros arcades da década de 1970.</p>
+    <!-- PS2 -->
+    <section class="console-section">
+      <img src="imagens/ps2.jpg" alt="PlayStation 2">
+      <div class="console-text">
+        <h2>PlayStation 2 (PS2)</h2>
+        <p><strong>Lançamento:</strong> 4 de março de 2000 (Japão)</p>
+        <p>O console mais vendido da história. Com suporte a DVD e uma imensa biblioteca de jogos, trouxe clássicos como <em>GTA: San Andreas</em> e <em>God of War</em>.</p>
       </div>
     </section>
 
-    <!-- 1968 -->
-    <section class="game-section">
-      <img src="imagens/magnavox-odyssey.jpg" alt="Magnavox Odyssey">
-      <div class="game-text">
-        <h2>1968 - Protótipo do Magnavox Odyssey</h2>
-        <p><strong>Criador:</strong> Ralph Baer</p>
-        <p>Ralph Baer desenvolveu o primeiro console de videogame doméstico. Anos depois, o projeto se tornaria o Magnavox Odyssey, lançado oficialmente em 1972.</p>
+    <!-- PS3 -->
+    <section class="console-section">
+      <img src="imagens/ps3.jpg" alt="PlayStation 3">
+      <div class="console-text">
+        <h2>PlayStation 3 (PS3)</h2>
+        <p><strong>Lançamento:</strong> 11 de novembro de 2006 (Japão)</p>
+        <p>O PS3 introduziu o Blu-ray e os gráficos em alta definição. Jogos como <em>Uncharted</em> e <em>The Last of Us</em> mostraram o poder cinematográfico dos games.</p>
       </div>
     </section>
 
-    <!-- 1973 -->
-    <section class="game-section">
-      <img src="imagens/pong.jpg" alt="Pong">
-      <div class="game-text">
-        <h2>1973 - Pong</h2>
-        <p><strong>Empresa:</strong> Atari</p>
-        <p>“Pong” popularizou os videogames. Simples e viciante, o jogo de tênis virtual foi o primeiro sucesso comercial da história, estabelecendo a Atari como pioneira no mercado.</p>
+    <!-- PS4 -->
+    <section class="console-section">
+      <img src="imagens/ps4.jpg" alt="PlayStation 4">
+      <div class="console-text">
+        <h2>PlayStation 4 (PS4)</h2>
+        <p><strong>Lançamento:</strong> 15 de novembro de 2013 (EUA)</p>
+        <p>Com foco em desempenho e jogos imersivos, o PS4 consolidou franquias marcantes como <em>Horizon Zero Dawn</em> e <em>God of War (2018)</em>.</p>
       </div>
     </section>
 
-    <!-- 1978 -->
-    <section class="game-section">
-      <img src="imagens/space-invaders.jpg" alt="Space Invaders">
-      <div class="game-text">
-        <h2>1978 - Space Invaders</h2>
-        <p><strong>Empresa:</strong> Taito</p>
-        <p>O sucesso de “Space Invaders” levou os arcades a um novo patamar, popularizando os fliperamas em todo o mundo e dando origem à chamada “Era de Ouro dos Videogames”.</p>
-      </div>
-    </section>
-
-    <!-- 1983 -->
-    <section class="game-section">
-      <img src="imagens/mario-bros.jpg" alt="Mario Bros">
-      <div class="game-text">
-        <h2>1983 - Mario Bros.</h2>
-        <p><strong>Empresa:</strong> Nintendo</p>
-        <p>Em meio à crise dos videogames, a Nintendo lançou “Mario Bros.”, que apresentou ao mundo o icônico encanador e marcou o início de uma das maiores franquias da história.</p>
-      </div>
-    </section>
-
-    <!-- 1988 -->
-    <section class="game-section">
-      <img src="imagens/sonic.jpg" alt="Sonic the Hedgehog">
-      <div class="game-text">
-        <h2>1988 - Sonic the Hedgehog</h2>
-        <p><strong>Empresa:</strong> Sega</p>
-        <p>Com a chegada do Mega Drive, “Sonic” se tornou o mascote da Sega e um dos maiores ícones da cultura dos videogames, rivalizando com o “Mario” da Nintendo.</p>
-      </div>
-    </section>
-
-    <!-- 1993 -->
-    <section class="game-section">
-      <img src="imagens/doom.jpg" alt="Doom">
-      <div class="game-text">
-        <h2>1993 - Doom</h2>
-        <p><strong>Empresa:</strong> id Software</p>
-        <p>“Doom” revolucionou os jogos de tiro em primeira pessoa (FPS) com seus gráficos 3D e jogabilidade intensa. Foi um marco para o futuro dos jogos de ação.</p>
-      </div>
-    </section>
-
-    <!-- 1998 -->
-    <section class="game-section">
-      <img src="imagens/zelda-ocarina.jpg" alt="The Legend of Zelda: Ocarina of Time">
-      <div class="game-text">
-        <h2>1998 - The Legend of Zelda: Ocarina of Time</h2>
-        <p><strong>Empresa:</strong> Nintendo</p>
-        <p>Um dos jogos mais aclamados de todos os tempos, “Ocarina of Time” trouxe uma nova dimensão à narrativa e à jogabilidade 3D, estabelecendo padrões para a indústria.</p>
-      </div>
-    </section>
-
-    <!-- 2004 -->
-    <section class="game-section">
-      <img src="imagens/gta-san-andreas.jpg" alt="GTA San Andreas">
-      <div class="game-text">
-        <h2>2004 - GTA: San Andreas</h2>
-        <p><strong>Empresa:</strong> Rockstar Games</p>
-        <p>Com um mundo aberto vasto e liberdade inédita, “GTA: San Andreas” redefiniu os jogos de mundo aberto e se tornou um fenômeno cultural global.</p>
-      </div>
-    </section>
-
-    <!-- 2009 -->
-    <section class="game-section">
-      <img src="imagens/minecraft.jpg" alt="Minecraft">
-      <div class="game-text">
-        <h2>2009 - Minecraft</h2>
-        <p><strong>Criador:</strong> Markus Persson (Notch)</p>
-        <p>“Minecraft” trouxe uma nova forma de jogar, oferecendo liberdade total para criar e explorar mundos. Tornou-se um dos jogos mais vendidos da história.</p>
-      </div>
-    </section>
-
-    <!-- 2013 -->
-    <section class="game-section">
-      <img src="imagens/the-last-of-us.jpg" alt="The Last of Us">
-      <div class="game-text">
-        <h2>2013 - The Last of Us</h2>
-        <p><strong>Empresa:</strong> Naughty Dog</p>
-        <p>Com uma narrativa cinematográfica e personagens marcantes, “The Last of Us” elevou o patamar do storytelling nos videogames.</p>
-      </div>
-    </section>
-
-    <!-- 2018 -->
-    <section class="game-section">
-      <img src="imagens/god-of-war.jpg" alt="God of War 2018">
-      <div class="game-text">
-        <h2>2018 - God of War</h2>
-        <p><strong>Empresa:</strong> Santa Monica Studio</p>
-        <p>O retorno de Kratos marcou a reinvenção da franquia, com uma história profunda e uma nova abordagem de combate, consolidando o PlayStation como referência em narrativa.</p>
-      </div>
-    </section>
-
-    <!-- 2023 -->
-    <section class="game-section">
-      <img src="imagens/zelda-totk.jpg" alt="Zelda: Tears of the Kingdom">
-      <div class="game-text">
-        <h2>2023 - The Legend of Zelda: Tears of the Kingdom</h2>
-        <p><strong>Empresa:</strong> Nintendo</p>
-        <p>Expansão criativa do universo de “Breath of the Wild”, “Tears of the Kingdom” reforça o domínio da Nintendo na criação de experiências imersivas e inovadoras.</p>
+    <!-- PS5 -->
+    <section class="console-section">
+      <img src="imagens/ps5.jpg" alt="PlayStation 5">
+      <div class="console-text">
+        <h2>PlayStation 5 (PS5)</h2>
+        <p><strong>Lançamento:</strong> 12 de novembro de 2020 (EUA)</p>
+        <p>Com SSD ultrarrápido e o inovador controle DualSense, o PS5 elevou a imersão e o realismo a um novo patamar na história dos videogames.</p>
       </div>
     </section>
   </main>
@@ -338,9 +271,8 @@
   <footer>
     <h2>Descrições Finais</h2>
     <p>Desenvolvido por <strong>Gabriel Steve de Oliveira</strong></p>
-    <p>Redes sociais:</p>
     <p>
-      <a href="https://www.instagram.com/gabriel_steve616?igsh=MTB3eDJ4NW54a2hhcw==" target="_blank">Instagram</a> |
+      <a href="https://www.instagram.com/gabriel_steve616" target="_blank">Instagram</a> |
       <a href="https://www.facebook.com/share/1BXgoaGVBG/" target="_blank">Facebook</a> |
       <a href="https://www.linkedin.com/in/gabriel-steve-de-oliveira-2a47331ba" target="_blank">LinkedIn</a> |
       <a href="https://github.com/GabrielSteve616" target="_blank">GitHub</a>
