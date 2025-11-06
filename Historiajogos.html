@@ -81,15 +81,16 @@
     /* Estrutura principal */
     main {
       padding: 20px;
-      max-width: 900px;
+      max-width: 1100px;
       margin: auto;
     }
 
     /* Seções dos jogos */
     .game-section {
       display: flex;
-      flex-direction: column;
       align-items: center;
+      justify-content: space-between;
+      gap: 25px;
       background-color: var(--branco);
       border-radius: 16px;
       box-shadow: 0 3px 10px var(--sombra);
@@ -100,21 +101,24 @@
       overflow: hidden;
     }
 
+    .game-section:nth-child(even) {
+      flex-direction: row-reverse;
+      border-left: none;
+      border-right: 6px solid var(--azul-detalhe);
+    }
+
     .game-section:hover {
       transform: translateY(-4px);
       box-shadow: 0 6px 15px var(--sombra);
     }
 
     .game-section img {
-      width: 100%;
-      max-width: 600px;
-      height: auto;
+      width: 45%;
+      max-width: 450px;
       border-radius: 12px;
-      object-fit: cover;
       border: 3px solid #ddd;
+      object-fit: cover;
       transition: transform 0.3s ease;
-      margin-bottom: 15px;
-      display: block;
     }
 
     .game-section img:hover {
@@ -122,9 +126,8 @@
     }
 
     .game-text {
-      text-align: center;
-      width: 100%;
-      max-width: 700px;
+      flex: 1;
+      text-align: left;
     }
 
     .game-text h2 {
@@ -137,7 +140,7 @@
       color: var(--cinza-escuro);
       line-height: 1.6;
       margin: 6px 0;
-      padding: 0 10px;
+      font-size: 1em;
     }
 
     /* Rodapé */
@@ -165,32 +168,31 @@
       text-decoration: underline;
     }
 
-    /* Responsividade total */
-    @media (max-width: 768px) {
-      header h1 {
-        font-size: 1.9em;
-      }
-
+    /* Responsividade */
+    @media (max-width: 900px) {
       .game-section {
-        padding: 15px;
+        flex-direction: column !important;
+        text-align: center;
+        align-items: center;
       }
 
       .game-section img {
         width: 100%;
-        max-width: 100%;
+        max-width: 500px;
+        margin-bottom: 15px;
+      }
+
+      .game-text {
+        text-align: center;
+        width: 100%;
       }
 
       .game-text h2 {
-        font-size: 1.3em;
+        font-size: 1.4em;
       }
 
       .game-text p {
-        font-size: 0.95em;
-      }
-
-      .navigation button {
-        width: 90%;
-        max-width: 300px;
+        font-size: 1em;
       }
     }
 
@@ -354,4 +356,5 @@
     <p>&copy; 2025 - Projeto História dos Games</p>
   </footer>
 </body>
+
 </html>
