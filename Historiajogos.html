@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -30,7 +29,6 @@
       color: var(--preto);
     }
 
-    /* Cabeçalho */
     header {
       background: linear-gradient(135deg, var(--azul-detalhe), #0056b3);
       color: var(--branco);
@@ -51,7 +49,6 @@
       margin-top: 10px;
     }
 
-    /* Navegação */
     .navigation {
       display: flex;
       justify-content: center;
@@ -78,14 +75,13 @@
       transform: scale(1.05);
     }
 
-    /* Estrutura principal */
     main {
       padding: 20px;
       max-width: 1100px;
       margin: auto;
     }
 
-    /* Seções dos jogos */
+    /* layout padrão: lado a lado */
     .game-section {
       display: flex;
       align-items: center;
@@ -98,7 +94,6 @@
       padding: 25px;
       border-left: 6px solid var(--azul-detalhe);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
-      overflow: hidden;
     }
 
     .game-section:nth-child(even) {
@@ -143,7 +138,6 @@
       font-size: 1em;
     }
 
-    /* Rodapé */
     footer {
       background-color: var(--preto);
       color: var(--branco);
@@ -151,11 +145,6 @@
       padding: 2em 1em;
       margin-top: 40px;
       border-top: 4px solid var(--azul-detalhe);
-    }
-
-    footer h2 {
-      margin-bottom: 10px;
-      color: var(--azul-detalhe);
     }
 
     footer a {
@@ -168,12 +157,16 @@
       text-decoration: underline;
     }
 
-    /* Responsividade */
+    /* modo celular */
     @media (max-width: 900px) {
       .game-section {
-        flex-direction: column !important;
+        flex-direction: column;
         text-align: center;
         align-items: center;
+      }
+
+      .game-section:nth-child(even) {
+        flex-direction: column;
       }
 
       .game-section img {
@@ -185,14 +178,6 @@
       .game-text {
         text-align: center;
         width: 100%;
-      }
-
-      .game-text h2 {
-        font-size: 1.4em;
-      }
-
-      .game-text p {
-        font-size: 1em;
       }
     }
 
@@ -207,7 +192,7 @@
 <body>
   <header>
     <h1>História dos Jogos</h1>
-    <h4>Uma linha do tempo da evolução dos videogames — de 1958 até os dias atuais</h4>
+    <h4>A linha do tempo da evolução dos videogames — de 1958 até os dias atuais</h4>
   </header>
 
   <div class="navigation">
@@ -356,5 +341,4 @@
     <p>&copy; 2025 - Projeto História dos Games</p>
   </footer>
 </body>
-
 </html>
