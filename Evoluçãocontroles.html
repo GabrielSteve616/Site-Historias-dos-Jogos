@@ -17,16 +17,12 @@
       --sombra: rgba(0, 0, 0, 0.15);
     }
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
     body {
       font-family: "Poppins", Arial, sans-serif;
       background-color: var(--cinza);
       color: var(--preto);
+      margin: 0;
+      padding: 0;
     }
 
     /* Cabeçalho */
@@ -40,7 +36,7 @@
 
     header h1 {
       margin: 0;
-      font-size: 2.4em;
+      font-size: 2.6em;
       letter-spacing: 1px;
     }
 
@@ -85,7 +81,6 @@
     /* Seções dos controles */
     .control-section {
       display: flex;
-      flex-direction: row;
       align-items: center;
       justify-content: space-between;
       background-color: var(--branco);
@@ -98,19 +93,19 @@
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
+    .control-section:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 6px 15px var(--sombra);
+    }
+
     .control-section:nth-child(even) {
       flex-direction: row-reverse;
       border-left: none;
       border-right: 6px solid var(--azul-detalhe);
     }
 
-    .control-section:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 6px 15px var(--sombra);
-    }
-
     .control-section img {
-      width: 45%;
+      width: 40%;
       border-radius: 12px;
       object-fit: cover;
       border: 3px solid #ddd;
@@ -122,7 +117,7 @@
     }
 
     .control-text {
-      width: 50%;
+      width: 55%;
     }
 
     .control-text h2 {
@@ -162,16 +157,24 @@
       text-decoration: underline;
     }
 
-    /* RESPONSIVO */
+    /* Responsivo */
     @media (max-width: 900px) {
       .control-section {
+        display: flex;
         flex-direction: column !important;
         text-align: center;
+        align-items: center;
+      }
+
+      .control-section:nth-child(even) {
+        flex-direction: column !important;
+        border-left: 6px solid var(--azul-detalhe);
+        border-right: none;
       }
 
       .control-section img {
         width: 100%;
-        max-width: 500px;
+        max-width: 480px;
         margin-bottom: 15px;
       }
 
@@ -179,26 +182,12 @@
         width: 100%;
       }
 
-      .control-text h2 {
-        font-size: 1.3em;
-      }
-
-      .control-text p {
-        font-size: 0.95em;
-      }
-
       header h1 {
         font-size: 2em;
       }
-    }
 
-    @media (max-width: 480px) {
       .control-text h2 {
-        font-size: 1.2em;
-      }
-
-      .control-text p {
-        font-size: 0.9em;
+        font-size: 1.3em;
       }
     }
   </style>
@@ -220,7 +209,7 @@
     <section class="control-section">
       <img src="imagens/atari-joystick.jpg" alt="Controle Atari 2600">
       <div class="control-text">
-        <h2>1977 — Atari 2600</h2>
+        <h2>1977 - Atari 2600</h2>
         <p><strong>Empresa:</strong> Atari</p>
         <p>O clássico controle com um único botão e um manche direcional. Simples, mas revolucionário para a época, foi o padrão dos primeiros consoles domésticos.</p>
       </div>
@@ -229,7 +218,7 @@
     <section class="control-section">
       <img src="imagens/nes-controller.jpg" alt="Controle NES Nintendo">
       <div class="control-text">
-        <h2>1983 — Nintendo Entertainment System (NES)</h2>
+        <h2>1983 - Nintendo Entertainment System (NES)</h2>
         <p><strong>Empresa:</strong> Nintendo</p>
         <p>Primeiro controle a usar o formato retangular e o direcional em cruz (D-Pad), criado por Gunpei Yokoi, trazendo precisão e conforto aos jogadores.</p>
       </div>
@@ -238,7 +227,7 @@
     <section class="control-section">
       <img src="imagens/sega-genesis-controller.jpg" alt="Controle Sega Mega Drive">
       <div class="control-text">
-        <h2>1988 — Sega Mega Drive</h2>
+        <h2>1988 - Sega Mega Drive</h2>
         <p><strong>Empresa:</strong> Sega</p>
         <p>Com três botões frontais e design ergonômico, o controle do Mega Drive foi projetado para jogos de ação mais rápidos e dinâmicos.</p>
       </div>
@@ -247,34 +236,34 @@
     <section class="control-section">
       <img src="imagens/snes-controller.jpg" alt="Controle Super Nintendo">
       <div class="control-text">
-        <h2>1990 — Super Nintendo</h2>
+        <h2>1990 - Super Nintendo</h2>
         <p><strong>Empresa:</strong> Nintendo</p>
-        <p>Introduziu botões de ombro (L e R) e mais comandos, definindo o layout básico dos controles modernos.</p>
+        <p>Introduziu os botões de ombro (L e R) e um layout aprimorado, definindo a base dos controles modernos.</p>
       </div>
     </section>
 
     <section class="control-section">
       <img src="imagens/playstation1-controller.jpg" alt="Controle PlayStation 1">
       <div class="control-text">
-        <h2>1994 — PlayStation</h2>
+        <h2>1994 - PlayStation</h2>
         <p><strong>Empresa:</strong> Sony</p>
-        <p>Com formato anatômico e botões icônicos (X, O, Quadrado e Triângulo), o DualShock trouxe vibração e analógicos, marcando o início da era moderna dos controles.</p>
+        <p>Com formato anatômico e botões icônicos (X, O, Quadrado e Triângulo), o DualShock trouxe vibração e analógicos, marcando a era moderna dos controles.</p>
       </div>
     </section>
 
     <section class="control-section">
       <img src="imagens/n64-controller.jpg" alt="Controle Nintendo 64">
       <div class="control-text">
-        <h2>1996 — Nintendo 64</h2>
+        <h2>1996 - Nintendo 64</h2>
         <p><strong>Empresa:</strong> Nintendo</p>
-        <p>Apresentou o primeiro joystick analógico em um controle de console, essencial para jogos em 3D como Super Mario 64.</p>
+        <p>Apresentou o primeiro joystick analógico em um controle de console, essencial para jogos 3D como Super Mario 64.</p>
       </div>
     </section>
 
     <section class="control-section">
       <img src="imagens/xbox-controller.jpg" alt="Controle Xbox Original">
       <div class="control-text">
-        <h2>2001 — Xbox Original</h2>
+        <h2>2001 - Xbox Original</h2>
         <p><strong>Empresa:</strong> Microsoft</p>
         <p>O controle “Duke” trouxe gatilhos analógicos e vibração aprimorada, destacando o foco da Microsoft em realismo e conforto.</p>
       </div>
@@ -283,16 +272,16 @@
     <section class="control-section">
       <img src="imagens/wii-remote.jpg" alt="Controle Nintendo Wii">
       <div class="control-text">
-        <h2>2006 — Wii Remote</h2>
+        <h2>2006 - Wii Remote</h2>
         <p><strong>Empresa:</strong> Nintendo</p>
-        <p>Revolucionou o mercado com sensores de movimento, transformando o corpo do jogador em parte da experiência.</p>
+        <p>O controle revolucionou o mercado com sensores de movimento, transformando o corpo do jogador em parte da experiência.</p>
       </div>
     </section>
 
     <section class="control-section">
       <img src="imagens/ps5-dualsense.jpg" alt="Controle PS5 DualSense">
       <div class="control-text">
-        <h2>2020 — PlayStation 5 DualSense</h2>
+        <h2>2020 - PlayStation 5 DualSense</h2>
         <p><strong>Empresa:</strong> Sony</p>
         <p>Com feedback háptico e gatilhos adaptáveis, o DualSense oferece sensações táteis realistas, elevando a imersão dos jogos.</p>
       </div>
@@ -301,9 +290,9 @@
     <section class="control-section">
       <img src="imagens/xbox-elite.jpg" alt="Controle Xbox Elite Series 2">
       <div class="control-text">
-        <h2>2021 — Xbox Elite Series 2</h2>
+        <h2>2021 - Xbox Elite Series 2</h2>
         <p><strong>Empresa:</strong> Microsoft</p>
-        <p>Com materiais premium, personalização total e bateria recarregável interna, o Elite 2 representa o auge da evolução dos controles modernos.</p>
+        <p>Com materiais premium, personalização total e bateria recarregável interna, o Elite Series 2 representa o ápice da evolução dos controles modernos.</p>
       </div>
     </section>
   </main>
